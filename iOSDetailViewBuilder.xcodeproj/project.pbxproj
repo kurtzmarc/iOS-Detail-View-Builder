@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		468BFD0B14AD22A800FECB92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD0A14AD22A800FECB92 /* Foundation.framework */; };
-		468BFD1114AD22A800FECB92 /* iOSDetailViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 468BFD1014AD22A800FECB92 /* iOSDetailViewBuilder.m */; };
 		468BFD1914AD22A800FECB92 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD1814AD22A800FECB92 /* SenTestingKit.framework */; };
 		468BFD1B14AD22A800FECB92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD1A14AD22A800FECB92 /* UIKit.framework */; };
 		468BFD1C14AD22A800FECB92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD0A14AD22A800FECB92 /* Foundation.framework */; };
@@ -25,21 +24,34 @@
 			remoteGlobalIDString = 468BFD0614AD22A800FECB92;
 			remoteInfo = iOSDetailViewBuilder;
 		};
+		468BFD8014AD22D100FECB92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 468BFD7B14AD22D000FECB92 /* iOSDetailViewBuilderDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 468BFD3F14AD22CF00FECB92;
+			remoteInfo = iOSDetailViewBuilderDemo;
+		};
+		468BFD8214AD22D100FECB92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 468BFD7B14AD22D000FECB92 /* iOSDetailViewBuilderDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 468BFD6314AD22D000FECB92;
+			remoteInfo = iOSDetailViewBuilderDemoTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		468BFD0714AD22A800FECB92 /* libiOSDetailViewBuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOSDetailViewBuilder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		468BFD0A14AD22A800FECB92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		468BFD0E14AD22A800FECB92 /* iOSDetailViewBuilder-Prefix.pch */ = {isa = PBXFileReference; path = "iOSDetailViewBuilder-Prefix.pch"; sourceTree = "<group>"; };
-		468BFD0F14AD22A800FECB92 /* iOSDetailViewBuilder.h */ = {isa = PBXFileReference; path = iOSDetailViewBuilder.h; sourceTree = "<group>"; };
-		468BFD1014AD22A800FECB92 /* iOSDetailViewBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDetailViewBuilder.m; sourceTree = "<group>"; };
+		468BFD0E14AD22A800FECB92 /* iOSDetailViewBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDetailViewBuilder-Prefix.pch"; sourceTree = "<group>"; };
 		468BFD1714AD22A800FECB92 /* iOSDetailViewBuilderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDetailViewBuilderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		468BFD1814AD22A800FECB92 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		468BFD1A14AD22A800FECB92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		468BFD2214AD22A800FECB92 /* iOSDetailViewBuilderTests-Info.plist */ = {isa = PBXFileReference; path = "iOSDetailViewBuilderTests-Info.plist"; sourceTree = "<group>"; };
+		468BFD2214AD22A800FECB92 /* iOSDetailViewBuilderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSDetailViewBuilderTests-Info.plist"; sourceTree = "<group>"; };
 		468BFD2414AD22A800FECB92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		468BFD2614AD22A800FECB92 /* iOSDetailViewBuilderTests.h */ = {isa = PBXFileReference; path = iOSDetailViewBuilderTests.h; sourceTree = "<group>"; };
+		468BFD2614AD22A800FECB92 /* iOSDetailViewBuilderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSDetailViewBuilderTests.h; sourceTree = "<group>"; };
 		468BFD2714AD22A800FECB92 /* iOSDetailViewBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDetailViewBuilderTests.m; sourceTree = "<group>"; };
+		468BFD7B14AD22D000FECB92 /* iOSDetailViewBuilderDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSDetailViewBuilderDemo.xcodeproj; path = iOSDetailViewBuilderDemo/iOSDetailViewBuilderDemo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 		468BFCFC14AD22A800FECB92 = {
 			isa = PBXGroup;
 			children = (
+				468BFD7B14AD22D000FECB92 /* iOSDetailViewBuilderDemo.xcodeproj */,
 				468BFD0C14AD22A800FECB92 /* iOSDetailViewBuilder */,
 				468BFD2014AD22A800FECB92 /* iOSDetailViewBuilderTests */,
 				468BFD0914AD22A800FECB92 /* Frameworks */,
@@ -97,8 +110,6 @@
 		468BFD0C14AD22A800FECB92 /* iOSDetailViewBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				468BFD0F14AD22A800FECB92 /* iOSDetailViewBuilder.h */,
-				468BFD1014AD22A800FECB92 /* iOSDetailViewBuilder.m */,
 				468BFD0D14AD22A800FECB92 /* Supporting Files */,
 			);
 			path = iOSDetailViewBuilder;
@@ -129,6 +140,15 @@
 				468BFD2314AD22A800FECB92 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		468BFD7C14AD22D000FECB92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				468BFD8114AD22D100FECB92 /* iOSDetailViewBuilderDemo.app */,
+				468BFD8314AD22D100FECB92 /* iOSDetailViewBuilderDemoTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +218,12 @@
 			mainGroup = 468BFCFC14AD22A800FECB92;
 			productRefGroup = 468BFD0814AD22A800FECB92 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 468BFD7C14AD22D000FECB92 /* Products */;
+					ProjectRef = 468BFD7B14AD22D000FECB92 /* iOSDetailViewBuilderDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				468BFD0614AD22A800FECB92 /* iOSDetailViewBuilder */,
@@ -205,6 +231,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		468BFD8114AD22D100FECB92 /* iOSDetailViewBuilderDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSDetailViewBuilderDemo.app;
+			remoteRef = 468BFD8014AD22D100FECB92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		468BFD8314AD22D100FECB92 /* iOSDetailViewBuilderDemoTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = iOSDetailViewBuilderDemoTests.octest;
+			remoteRef = 468BFD8214AD22D100FECB92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		468BFD1414AD22A800FECB92 /* Resources */ = {
@@ -238,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468BFD1114AD22A800FECB92 /* iOSDetailViewBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +429,7 @@
 				468BFD2D14AD22A800FECB92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		468BFD2E14AD22A800FECB92 /* Build configuration list for PBXNativeTarget "iOSDetailViewBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +438,7 @@
 				468BFD3014AD22A800FECB92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
