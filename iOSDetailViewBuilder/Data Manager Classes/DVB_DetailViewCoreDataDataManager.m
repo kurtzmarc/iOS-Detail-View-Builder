@@ -31,7 +31,7 @@
 
 -(void)setValue:(NSObject *)value forItem:(DVB_DetailViewItem*) item;
 {
-    if (self.managedObject)
+    if (self.managedObject && (!self.managedObject.isDeleted))
     {
         [self.managedObject setValue:value forKey:item.key];
         
