@@ -9,6 +9,8 @@
 #import "DVB_DetailViewBuilder.h"
 #import "DVB_DetailViewGroup.h"
 #import "DVB_DetailViewItem.h"
+#import "DVB_DetailViewDataManager.h"
+#import "TTGlobalUICommon.h"
 
 @implementation DVB_DetailViewBuilder
 
@@ -50,13 +52,13 @@
     return [item.dataManager getValue:item];
 }
 
--(DetailViewItem*) itemForIndexPath:(NSIndexPath*) index
+-(DVB_DetailViewItem*) itemForIndexPath:(NSIndexPath*) index
 {
     DVB_DetailViewGroup* group = [self.groupArray objectAtIndex:index.section];
     return group == nil ? nil : [group itemForIndex:index.row];
 }
 
-- (NSIndexPath*) indexPathForItem:(DetailViewItem*) item
+- (NSIndexPath*) indexPathForItem:(DVB_DetailViewItem*) item
 {
     for (int groupIndex=0;groupIndex<self.groupArray.count;groupIndex++) {
         DVB_DetailViewGroup* group = [self.groupArray objectAtIndex:groupIndex];

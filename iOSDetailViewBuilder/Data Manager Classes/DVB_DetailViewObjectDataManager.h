@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DetailViewDataManager.h"
+#import "DVB_DetailViewDataManager.h"
 
-@interface DetailViewObjectDataManager : DetailViewDataManager
+@interface DVB_DetailViewObjectDataManager : DVB_DetailViewDataManager
 
 @property (nonatomic,strong) NSObject* object;
 

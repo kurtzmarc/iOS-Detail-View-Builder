@@ -9,8 +9,8 @@
 #import "DVB_DetailViewItem.h"
 #import "DVB_DetailViewBuilder.h"
 #import "DVB_DetailViewDataManager.h"
-//#import "PhotoFlipperController.h"
-//#import "MKTextView.h"
+#import "TTGlobalUICommon.h"
+#import "DVB_ExpandableTextView.h"
 
 #define GROUPED_CELL_WIDTH 300
 #define CELL_PADDING 5
@@ -81,7 +81,7 @@
     [cell.contentView addSubview:label];
     
     // Add text field
-    MKTextView *textField = [[MKTextView alloc] initWithFrame:textFieldRect];
+    DVB_ExpandableTextView *textField = [[DVB_ExpandableTextView alloc] initWithFrame:textFieldRect];
     textField.backgroundColor = [UIColor clearColor];
     textField.scrollEnabled = NO;
     textField.userInteractionEnabled = NO;

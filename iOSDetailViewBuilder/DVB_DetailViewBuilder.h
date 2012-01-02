@@ -6,6 +6,8 @@
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @class DVB_DetailViewGroup;
 @class DVB_DetailViewItem;
 

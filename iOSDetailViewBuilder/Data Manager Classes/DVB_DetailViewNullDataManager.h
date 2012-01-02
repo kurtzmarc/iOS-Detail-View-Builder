@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DetailViewDataManager.h"
+#import "DVB_DetailViewDataManager.h"
 
-@interface DetailViewNullDataManager : DetailViewDataManager
+@interface DVB_DetailViewNullDataManager : DVB_DetailViewDataManager
 
 @end

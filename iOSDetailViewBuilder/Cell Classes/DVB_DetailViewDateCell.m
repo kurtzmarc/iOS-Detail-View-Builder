@@ -9,6 +9,7 @@
 #import "DVB_DetailViewDateCell.h"
 #import "DVB_DetailViewDataManager.h"
 #import "DVB_DetailViewBuilder.h"
+#import "TTGlobalUICommon.h"
 
 @implementation DVB_DetailViewDateCell
 
@@ -68,7 +69,7 @@
     if (obj)
         datePicker.date = (NSDate*)obj;
     else
-        datePicker.date = [NSDate dateWithToday];
+        datePicker.date = [NSDate date];
     
     UIToolbar* pickerToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     pickerToolbar.barStyle=UIBarStyleBlackOpaque;
@@ -116,8 +117,8 @@
 
         UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:self.label delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles: nil];
         self.actionSheet = actionSheet;
-        [pickerToolbar setFrame:CGRectMake(0, 0, self.tableViewController.view.size.width, 44)];
-        [datePicker setFrame:CGRectMake(0, 44, self.tableViewController.view.size.width, 216)];
+        [pickerToolbar setFrame:CGRectMake(0, 0, self.tableViewController.view.frame.size.width, 44)];
+        [datePicker setFrame:CGRectMake(0, 44, self.tableViewController.view.frame.size.width, 216)];
         [actionSheet addSubview:pickerToolbar];
         [actionSheet addSubview:datePicker];
         [actionSheet showInView:self.tableViewController.view];

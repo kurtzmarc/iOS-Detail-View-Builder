@@ -6,9 +6,9 @@
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
 //
 
-#import "DetailViewNullDataManager.h"
+#import "DVB_DetailViewNullDataManager.h"
 
-@implementation DetailViewNullDataManager
+@implementation DVB_DetailViewNullDataManager
 
 - (id)init
 {
@@ -20,12 +20,12 @@
     return self;
 }
 
--(NSObject *)getValue:(DetailViewItem*) item;
+-(NSObject *)getValue:(DVB_DetailViewItem*) item;
 {
     return nil;
 }
 
--(void)setValue:(NSObject *)value forItem:(DetailViewItem*) item;
+-(void)setValue:(NSObject *)value forItem:(DVB_DetailViewItem*) item;
 {
     // Do nothing...
 }

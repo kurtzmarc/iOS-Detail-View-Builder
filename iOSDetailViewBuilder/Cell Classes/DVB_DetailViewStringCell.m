@@ -9,6 +9,7 @@
 #import "DVB_DetailViewStringCell.h"
 #import "DVB_DetailViewDataManager.h"
 #import "DVB_DetailViewBuilder.h"
+#import "TTGlobalUICommon.h"
 
 @implementation DVB_DetailViewStringCell
 

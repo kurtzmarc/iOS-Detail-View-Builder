@@ -6,11 +6,12 @@
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
 //
 
-#import "DetailViewNSUserDefaultsDataManager.h"
-#import "DetailViewBuilder.h"
-#import "DetailViewItem.h"
+#import "DVB_DetailViewNSUserDefaultsDataManager.h"
+#import "DVB_DetailViewBuilder.h"
+#import "DVB_DetailViewItem.h"
+#import <UIKit/UIKit.h>
 
-@implementation DetailViewNSUserDefaultsDataManager
+@implementation DVB_DetailViewNSUserDefaultsDataManager
 
 - (id)init
 {
@@ -23,12 +24,12 @@
 }
 
 
--(NSObject *)getValue:(DetailViewItem*) item;
+-(NSObject *)getValue:(DVB_DetailViewItem*) item;
 {
     return [[NSUserDefaults standardUserDefaults] valueForKeyPath:item.key];
 }
 
--(void)setValue:(NSObject *)value forItem:(DetailViewItem*) item;
+-(void)setValue:(NSObject *)value forItem:(DVB_DetailViewItem*) item;
 {
     [[NSUserDefaults standardUserDefaults] setValue:value forKeyPath:item.key];
     [[NSUserDefaults standardUserDefaults] synchronize];

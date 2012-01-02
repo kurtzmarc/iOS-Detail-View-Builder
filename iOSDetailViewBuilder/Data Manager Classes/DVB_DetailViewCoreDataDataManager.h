@@ -6,10 +6,10 @@
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "DetailViewDataManager.h"
+#import "DVB_DetailViewDataManager.h"
+#import <CoreData/CoreData.h>
 
-@interface DetailViewCoreDataDataManager : DetailViewDataManager
+@interface DVB_DetailViewCoreDataDataManager : DVB_DetailViewDataManager
 
 @property (nonatomic,strong) NSManagedObject* managedObject;
 

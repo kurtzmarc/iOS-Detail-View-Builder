@@ -6,11 +6,11 @@
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
 //
 
-#import "DetailViewCoreDataDataManager.h"
-#import "DetailViewBuilder.h"
-#import "DetailViewItem.h"
+#import "DVB_DetailViewCoreDataDataManager.h"
+#import "DVB_DetailViewBuilder.h"
+#import "DVB_DetailViewItem.h"
 
-@implementation DetailViewCoreDataDataManager
+@implementation DVB_DetailViewCoreDataDataManager
 
 @synthesize managedObject = _managedObject;
 
@@ -24,12 +24,12 @@
 }
 
 
--(NSObject *)getValue:(DetailViewItem*) item;
+-(NSObject *)getValue:(DVB_DetailViewItem*) item;
 {
     return self.managedObject ? [self.managedObject valueForKeyPath:item.key] : nil;
 }
 
--(void)setValue:(NSObject *)value forItem:(DetailViewItem*) item;
+-(void)setValue:(NSObject *)value forItem:(DVB_DetailViewItem*) item;
 {
     if (self.managedObject)
     {

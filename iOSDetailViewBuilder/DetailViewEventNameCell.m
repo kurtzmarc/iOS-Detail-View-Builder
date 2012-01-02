@@ -6,9 +6,10 @@
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
 //
 
+#define DEFAULT_NEW_RECORD_NAME @"New Record"
+
 #import "DetailViewEventNameCell.h"
 #import "DVB_DetailView.h"
-#import "Constants.h"
 
 @implementation DetailViewEventNameCell
 
@@ -17,7 +18,7 @@
     [super configureCell:cell];
 
     UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
-    if ([textView.text isEqualToString:DEFAULT_NEW_EVENT_NAME])
+    if ([textView.text isEqualToString:[self defaultNewRecordName]])
     {
         textView.textColor = [UIColor lightGrayColor];
     }
@@ -28,7 +29,7 @@
     if ([[self superclass] instancesRespondToSelector:@selector(textViewDidBeginEditing:)])
         [super textViewDidBeginEditing:textView];
     
-    if ([textView.text isEqualToString:DEFAULT_NEW_EVENT_NAME])
+    if ([textView.text isEqualToString:[self defaultNewRecordName]])
     {
         textView.textColor = [UIColor blackColor];
         textView.text = @"";
@@ -37,14 +38,19 @@
 
 -(void)textViewDidEndEditing:(UITextView *)textView
 {
-    if ([textView.text isEqualToString:@""] || [textView.text isEqualToString:DEFAULT_NEW_EVENT_NAME])
+    if ([textView.text isEqualToString:@""] || [textView.text isEqualToString:[self defaultNewRecordName]])
     {
         textView.textColor = [UIColor lightGrayColor];
-        textView.text = DEFAULT_NEW_EVENT_NAME;
+        textView.text = [self defaultNewRecordName];
     }
 
     if ([[self superclass] instancesRespondToSelector:@selector(textViewDidEndEditing:)])
         [super textViewDidEndEditing:textView];
+}
+
+-(NSString*) defaultNewRecordName
+{
+    return @"New Record";
 }
 
 @end

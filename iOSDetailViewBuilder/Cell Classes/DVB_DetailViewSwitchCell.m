@@ -9,17 +9,18 @@
 #import "DVB_DetailViewSwitchCell.h"
 #import "DVB_DetailViewDataManager.h"
 #import "DVB_DetailViewBuilder.h"
+#import "TTGlobalUICommon.h"
 
-@implementation DetailViewSwitchCell
+@implementation DVB_DetailViewSwitchCell
 
 #define GROUPED_CELL_WIDTH 300
 #define CELL_PADDING 5
 
 - (id)initWithLabel:(NSString *) labelString
-    withDataManager:(DetailViewDataManager*) dataManager
+    withDataManager:(DVB_DetailViewDataManager*) dataManager
             withKey:(NSString*) key
      withController:(UITableViewController*) controller
-        withBuilder:(DetailViewBuilder*) builder
+        withBuilder:(DVB_DetailViewBuilder*) builder
 {
     self = [super initWithLabel:labelString withDataManager:dataManager withKey:key withController:controller withBuilder:builder];
     if (self) {
@@ -60,7 +61,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     // Add label
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, 12, 0, cell.height)];
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, 12, 0, cell.frame.size.height)];
     label.tag = kLabelTag;
     label.font = [UIFont boldSystemFontOfSize:17.0];
     label.backgroundColor = [UIColor clearColor];

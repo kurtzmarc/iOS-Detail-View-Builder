@@ -10,4 +10,6 @@
 
 @interface DetailViewEventNameCell : DVB_DetailViewStringCell
 
+-(NSString*) defaultNewRecordName;
+
 @end
