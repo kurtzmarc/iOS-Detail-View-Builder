@@ -7,12 +7,22 @@
 //
 
 #import "CoreDataDemoController.h"
+#import "../iOSDetailViewBuilder/DVB_DetailView.h"
+#import "../iOSDetailViewBuilder/DVB_DetailViewDataManagerTypes.h"
+#import "../iOSDetailViewBuilder/DVB_DetailViewCellTypes.h"
+#import "Person.h"
 
-@interface CoreDataDemoController ()
+@interface CoreDataDemoController (){
+@private
+    DVB_DetailViewBuilder* _builder;
+    DVB_DetailViewDataManager* _dataManager;
+}
 
 @end
 
 @implementation CoreDataDemoController
+
+@synthesize person = _person;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,11 +37,26 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _builder = [[DVB_DetailViewBuilder alloc] init];
+    
+    _dataManager = [[DVB_DetailViewCoreDataDataManager alloc] initWithManagedObject:self.person];
+    
+    DVB_DetailViewGroup* group;
+    DVB_DetailViewItem* item;
+    
+    // Group 1
+    group = [[DVB_DetailViewGroup alloc] initWithTitle:@"Person" withBuilder:_builder];
+    
+    item = [[DVB_DetailViewStringCell alloc] initWithLabel:@"Name" withDataManager:_dataManager withKey:@"name" withController:self withBuilder:_builder];
+    [group addDetailViewItem:item];
+    
+    item = [[DVB_DetailViewDateCell alloc] initWithLabel:@"Birth Date" withDataManager:_dataManager withKey:@"birthdate" withController:self withBuilder:_builder];
+    [group addDetailViewItem:item];
+    
+    item = [[DVB_DetailViewSwitchCell alloc] initWithLabel:@"Birth Date Alarm" withDataManager:_dataManager withKey:@"birthdatealarm" withController:self withBuilder:_builder];
+    [group addDetailViewItem:item];
+    
+    [_builder addDetailViewBuilderGroup:group];
 }
 
 - (void)viewDidUnload
@@ -50,78 +75,47 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return [_builder groupCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [_builder groupItemCount:section];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
+    return [_builder heightForIndexPath:indexPath ];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    DVB_DetailViewItem* item = [_builder itemForIndexPath:indexPath];
+    
+    NSString *CellIdentifier = [item cellIdentifier];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [item createCell];
+    }
     
-    // Configure the cell...
-    
+    [item configureCell:cell];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return [_builder groupTitleForSection:section];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    DVB_DetailViewItem* item = [_builder itemForIndexPath:indexPath];
+    
+    [item didSelectCell:indexPath];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

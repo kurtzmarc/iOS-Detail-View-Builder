@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Person;
+
 @interface CoreDataDemoController : UITableViewController
+
+@property (nonatomic, strong) Person* person;
 
 @end

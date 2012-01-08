@@ -13,7 +13,7 @@
 @interface Person : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSDecimalNumber * birthdate;
+@property (nonatomic, retain) NSDate * birthdate;
 @property (nonatomic, retain) NSNumber * birthdatealarm;
 
 @end
