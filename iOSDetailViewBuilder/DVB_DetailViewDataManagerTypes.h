@@ -9,9 +9,9 @@
 #ifndef Face_Charts_DetailViewDataManagerTypes_h
 #define Face_Charts_DetailViewDataManagerTypes_h
 
-#import "DVB_DetailViewCoreDataDataManager.h"
-#import "DVB_DetailViewNSUserDefaultsDataManager.h"
-#import "DVB_DetailViewObjectDataManager.h"
-#import "DVB_DetailViewNullDataManager.h"
+#import "Data Manager Classes/DVB_DetailViewCoreDataDataManager.h"
+#import "Data Manager Classes/DVB_DetailViewNSUserDefaultsDataManager.h"
+#import "Data Manager Classes/DVB_DetailViewObjectDataManager.h"
+#import "Data Manager Classes/DVB_DetailViewNullDataManager.h"
 
 #endif

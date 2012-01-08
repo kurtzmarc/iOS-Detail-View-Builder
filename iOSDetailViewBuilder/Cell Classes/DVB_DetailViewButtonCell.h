@@ -19,7 +19,7 @@ typedef void(^BlockAction)(void);
     withDataManager:(DVB_DetailViewDataManager*) dataManager
             withKey:(NSString*) key
      withController:(UITableViewController*) controller
-        withBuilder:(DVB_DetailViewDataManager*) builder;
+        withBuilder:(DVB_DetailViewBuilder*) builder;
 
 @property (nonatomic,strong) BlockAction onClick;
 

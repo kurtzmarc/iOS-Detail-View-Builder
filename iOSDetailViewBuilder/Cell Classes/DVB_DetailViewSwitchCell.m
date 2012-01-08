@@ -33,21 +33,6 @@
     return self;
 }
 
--(CGFloat)height
-{
-    if (_cellHeight == 0)
-    {
-        NSString* value = (NSString*)[self.dataManager getValue:self];
-
-        UITextView* textView = [[UITextView alloc]initWithFrame:CGRectMake(0,0,_cellWidth,0)];
-        textView.text = value.length > 0 ? value : @" ";
-        textView.font = [UIFont boldSystemFontOfSize:15];
-        [textView sizeToFit];
-        _cellHeight = MAX(textView.contentSize.height, ttkDefaultRowHeight);
-    }
-    return _cellHeight;
-}
-
 - (NSString*)cellIdentifier
 {
     return [@"BuilderSwitchCell-" stringByAppendingString:self.key];

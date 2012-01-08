@@ -9,11 +9,9 @@
 #ifndef Face_Charts_DetailViewCellTypes_h
 #define Face_Charts_DetailViewCellTypes_h
 
-#import "DVB_DetailViewMediaCell.h"
-#import "DVB_DetailViewStringCell.h"
-#import "DVB_DetailViewDateCell.h"
-#import "DVB_DetailViewButtonCell.h"
-#import "DVB_DetailViewSwitchCell.h"
-#import "DVB_DetailViewTimeSpanCell.h"
+#import "Cell Classes/DVB_DetailViewStringCell.h"
+#import "Cell Classes/DVB_DetailViewDateCell.h"
+#import "Cell Classes/DVB_DetailViewButtonCell.h"
+#import "Cell Classes/DVB_DetailViewSwitchCell.h"
 
 #endif
