@@ -11,3 +11,6 @@ The general idea is that you create a data manager for the type of data you want
 
 Please view the demo project (coming soon...) for a detailed example of how to use the library.
 
+TODO
+----
+1. Add more examples to demo project including custom cells.
