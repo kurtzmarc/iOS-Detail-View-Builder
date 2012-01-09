@@ -34,6 +34,11 @@
 {
     [super viewDidLoad];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(defaultsChanged:)  
+                                                 name:NSUserDefaultsDidChangeNotification
+                                               object:nil];
+    
     _builder = [[DVB_DetailViewBuilder alloc] init];
     
     _dataManager = [[DVB_DetailViewNSUserDefaultsDataManager alloc] init];
@@ -76,11 +81,17 @@
     [_builder addDetailViewBuilderGroup:group];
 }
 
+- (void)defaultsChanged:(NSNotification *)notification {
+    [self.tableView reloadData];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

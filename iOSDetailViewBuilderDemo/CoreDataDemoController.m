@@ -15,7 +15,7 @@
 @interface CoreDataDemoController (){
 @private
     DVB_DetailViewBuilder* _builder;
-    DVB_DetailViewDataManager* _dataManager;
+    DVB_DetailViewCoreDataDataManager* _dataManager;
 }
 
 @end
@@ -31,6 +31,48 @@
         // Custom initialization
     }
     return self;
+}
+
+-(void) setPerson:(Person *)person
+{
+    [_builder requestEndEditing];
+    
+    if (_person != nil)
+    {
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+    _person = person;
+    if (_dataManager != nil)
+        _dataManager.managedObject = _person;
+    
+    if (_person != nil)
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(personUpdated:)
+                                                     name:NSManagedObjectContextObjectsDidChangeNotification
+                                                   object:[_person managedObjectContext]];
+        // Set title...
+        //self.title = _person.name;
+    }
+    [self.tableView reloadData];
+}
+
+- (void) personUpdated:(NSNotification*)notification {
+    NSSet* deletedObjects = [[notification userInfo] objectForKey:NSDeletedObjectsKey] ;
+    if ([deletedObjects containsObject:self.person])
+    {
+        self.person = nil;
+        // Close detail view...
+        //[self.navigationController popToViewController:self animated:NO];
+        //[self.navigationController popViewControllerAnimated:YES];
+    }
+    NSSet* updatedObjects = [[notification userInfo] objectForKey:NSUpdatedObjectsKey] ;
+    if ([updatedObjects containsObject:self.person])
+    {
+        // Set title...
+        //self.title = self.person.name;
+        [self.tableView reloadData];
+    }
 }
 
 - (void)viewDidLoad
@@ -64,6 +106,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.person = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
