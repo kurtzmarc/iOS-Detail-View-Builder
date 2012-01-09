@@ -34,13 +34,7 @@
 {
     if (_cellHeight == 0)
     {
-        NSString* value = (NSString*)[self.dataManager getValue:self];
-
-        UITextView* textView = [[UITextView alloc]initWithFrame:CGRectMake(0,0,_cellWidth,0)];
-        textView.text = value.length > 0 ? value : @" ";
-        textView.font = [UIFont boldSystemFontOfSize:15];
-        [textView sizeToFit];
-        _cellHeight = MAX(textView.contentSize.height, ttkDefaultRowHeight);
+        _cellHeight = ttkDefaultRowHeight;
     }
     return _cellHeight;
 }
@@ -92,13 +86,6 @@
 
             [self performSelector:@selector(resizeTableView) withObject:nil afterDelay:0.0];
         }
-
-        CGFloat topCorrect = (/*self.textViewHidden.bounds.size.height*/ _cellHeight - textView.contentSize.height * textView.zoomScale)  / 2.0;
-        if (textView.text.length == 0)
-            topCorrect = 4.5;
-        topCorrect = ( topCorrect < 0.0 ? 0.0 : topCorrect );
-        textView.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
-
     }
     else
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
@@ -112,13 +99,13 @@
 
 -(void)adjustTextView:(UITextView*) textView
 {
-    _cellHeight = MAX(textView.contentSize.height, ttkDefaultRowHeight);
+    _cellHeight = MAX(textView.contentSize.height + 4.5, ttkDefaultRowHeight);
     
     if (textView.text.length == 0)
         _cellHeight = ttkDefaultRowHeight;
     
     CGRect frame = textView.frame;
-    frame.size.height = _cellHeight;
+    frame.size.height = _cellHeight - 9;
     textView.frame = frame;
 }
 

@@ -68,7 +68,7 @@
     cellRect.size.width = GROUPED_CELL_WIDTH;
     CGRectDivide(cellRect, &labelRect, &textFieldRect, cellRect.size.width * 0.3, CGRectMinXEdge);
     labelRect = CGRectInset(labelRect, CELL_PADDING, 0);
-    textFieldRect = CGRectInset(textFieldRect, CELL_PADDING, 0);
+    textFieldRect = CGRectInset(textFieldRect, CELL_PADDING, 4.5);
     
     // Add label
     UILabel* label = [[UILabel alloc] initWithFrame:labelRect];

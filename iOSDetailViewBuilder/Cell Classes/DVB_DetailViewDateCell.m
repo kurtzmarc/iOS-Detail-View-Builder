@@ -39,6 +39,11 @@
 {
     UITableViewCell* cell = [self createStockCellWithDelegate:nil isEditable:NO];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    // Give a little more width to date cells...
+    UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
+    CGRect textViewFrame = textView.frame;
+    textViewFrame.size.width += 25;
+    textView.frame = textViewFrame;
     return cell;
 }
 
