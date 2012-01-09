@@ -62,6 +62,8 @@
     }
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    viewController1.tabBarItem.image = [UIImage imageNamed:@"33-cabinet.png"];
+    viewController2.tabBarItem.image = [UIImage imageNamed:@"19-gear.png"];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

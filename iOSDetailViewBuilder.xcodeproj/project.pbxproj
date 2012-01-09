@@ -50,6 +50,10 @@
 		468BFDFF14AD251C00FECB92 /* DVB_DetailViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 468BFDDF14AD251C00FECB92 /* DVB_DetailViewItem.m */; };
 		468BFE0114AD272A00FECB92 /* DVB_DetailViewDataManagerTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 468BFE0014AD272A00FECB92 /* DVB_DetailViewDataManagerTypes.h */; };
 		468BFE0314AD2ADE00FECB92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFE0214AD2ADE00FECB92 /* UIKit.framework */; };
+		46C9103114BA732F00BFAC77 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C9102D14BA732F00BFAC77 /* 19-gear.png */; };
+		46C9103214BA732F00BFAC77 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C9102E14BA732F00BFAC77 /* 19-gear@2x.png */; };
+		46C9103314BA732F00BFAC77 /* 33-cabinet.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C9102F14BA732F00BFAC77 /* 33-cabinet.png */; };
+		46C9103414BA732F00BFAC77 /* 33-cabinet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C9103014BA732F00BFAC77 /* 33-cabinet@2x.png */; };
 		46D3027614B9280D00D473B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFE0214AD2ADE00FECB92 /* UIKit.framework */; };
 		46D3027714B9280D00D473B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD0A14AD22A800FECB92 /* Foundation.framework */; };
 		46D3027914B9280D00D473B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D3027814B9280D00D473B2 /* CoreGraphics.framework */; };
@@ -130,6 +134,10 @@
 		468BFDDF14AD251C00FECB92 /* DVB_DetailViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewItem.m; sourceTree = "<group>"; };
 		468BFE0014AD272A00FECB92 /* DVB_DetailViewDataManagerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewDataManagerTypes.h; sourceTree = "<group>"; };
 		468BFE0214AD2ADE00FECB92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		46C9102D14BA732F00BFAC77 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
+		46C9102E14BA732F00BFAC77 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear@2x.png"; sourceTree = "<group>"; };
+		46C9102F14BA732F00BFAC77 /* 33-cabinet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "33-cabinet.png"; sourceTree = "<group>"; };
+		46C9103014BA732F00BFAC77 /* 33-cabinet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "33-cabinet@2x.png"; sourceTree = "<group>"; };
 		46D3027414B9280D00D473B2 /* iOSDetailViewBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDetailViewBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D3027814B9280D00D473B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		46D3027A14B9280D00D473B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -313,6 +321,17 @@
 			path = "Data Manager Classes";
 			sourceTree = "<group>";
 		};
+		46C9102C14BA732F00BFAC77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46C9102D14BA732F00BFAC77 /* 19-gear.png */,
+				46C9102E14BA732F00BFAC77 /* 19-gear@2x.png */,
+				46C9102F14BA732F00BFAC77 /* 33-cabinet.png */,
+				46C9103014BA732F00BFAC77 /* 33-cabinet@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		46D3027C14B9280D00D473B2 /* iOSDetailViewBuilderDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +346,7 @@
 				46D302D314B92B2000D473B2 /* NSUserDefaultsDemoController.h */,
 				46D302D414B92B2000D473B2 /* NSUserDefaultsDemoController.m */,
 				46D302D514B92B2000D473B2 /* NSUserDefaultsDemoController.xib */,
+				46C9102C14BA732F00BFAC77 /* Resources */,
 				46D3027D14B9280D00D473B2 /* Supporting Files */,
 			);
 			path = iOSDetailViewBuilderDemo;
@@ -473,6 +493,10 @@
 				46D3028114B9280D00D473B2 /* InfoPlist.strings in Resources */,
 				46D302D714B92B2000D473B2 /* NSUserDefaultsDemoController.xib in Resources */,
 				46D302E114B92CFF00D473B2 /* CoreDataDemoController.xib in Resources */,
+				46C9103114BA732F00BFAC77 /* 19-gear.png in Resources */,
+				46C9103214BA732F00BFAC77 /* 19-gear@2x.png in Resources */,
+				46C9103314BA732F00BFAC77 /* 33-cabinet.png in Resources */,
+				46C9103414BA732F00BFAC77 /* 33-cabinet@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +764,7 @@
 				46D3028D14B9280D00D473B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
