@@ -21,6 +21,6 @@ typedef void(^BlockAction)(void);
      withController:(UITableViewController*) controller
         withBuilder:(DVB_DetailViewBuilder*) builder;
 
-@property (nonatomic,strong) BlockAction onClick;
+@property (nonatomic, copy) BlockAction onClick;
 
 @end
