@@ -42,8 +42,6 @@
 		468BFDF114AD251C00FECB92 /* DVB_DetailViewNullDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 468BFDD114AD251C00FECB92 /* DVB_DetailViewNullDataManager.m */; };
 		468BFDF214AD251C00FECB92 /* DVB_DetailViewObjectDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 468BFDD214AD251C00FECB92 /* DVB_DetailViewObjectDataManager.h */; };
 		468BFDF314AD251C00FECB92 /* DVB_DetailViewObjectDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 468BFDD314AD251C00FECB92 /* DVB_DetailViewObjectDataManager.m */; };
-		468BFDF414AD251C00FECB92 /* DetailViewEventNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 468BFDD414AD251C00FECB92 /* DetailViewEventNameCell.m */; };
-		468BFDF514AD251C00FECB92 /* DetailViewEventNameCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 468BFDD514AD251C00FECB92 /* DetailViewEventNameCell.h */; };
 		468BFDF614AD251C00FECB92 /* DVB_DetailView.h in Headers */ = {isa = PBXBuildFile; fileRef = 468BFDD614AD251C00FECB92 /* DVB_DetailView.h */; };
 		468BFDF714AD251C00FECB92 /* DVB_DetailViewBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 468BFDD714AD251C00FECB92 /* DVB_DetailViewBuilder.h */; };
 		468BFDF814AD251C00FECB92 /* DVB_DetailViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 468BFDD814AD251C00FECB92 /* DVB_DetailViewBuilder.m */; };
@@ -132,8 +130,6 @@
 		468BFDD114AD251C00FECB92 /* DVB_DetailViewNullDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewNullDataManager.m; sourceTree = "<group>"; };
 		468BFDD214AD251C00FECB92 /* DVB_DetailViewObjectDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewObjectDataManager.h; sourceTree = "<group>"; };
 		468BFDD314AD251C00FECB92 /* DVB_DetailViewObjectDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewObjectDataManager.m; sourceTree = "<group>"; };
-		468BFDD414AD251C00FECB92 /* DetailViewEventNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewEventNameCell.m; sourceTree = "<group>"; };
-		468BFDD514AD251C00FECB92 /* DetailViewEventNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewEventNameCell.h; sourceTree = "<group>"; };
 		468BFDD614AD251C00FECB92 /* DVB_DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailView.h; sourceTree = "<group>"; };
 		468BFDD714AD251C00FECB92 /* DVB_DetailViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewBuilder.h; sourceTree = "<group>"; };
 		468BFDD814AD251C00FECB92 /* DVB_DetailViewBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewBuilder.m; sourceTree = "<group>"; };
@@ -257,8 +253,6 @@
 				468BFDCB14AD251C00FECB92 /* Data Manager Classes */,
 				466AEEA514B15A6700C6FFD5 /* DVB_ExpandableTextView.h */,
 				466AEEA614B15A6700C6FFD5 /* DVB_ExpandableTextView.m */,
-				468BFDD514AD251C00FECB92 /* DetailViewEventNameCell.h */,
-				468BFDD414AD251C00FECB92 /* DetailViewEventNameCell.m */,
 				468BFDD614AD251C00FECB92 /* DVB_DetailView.h */,
 				468BFDD914AD251C00FECB92 /* DVB_DetailViewCellTypes.h */,
 				468BFE0014AD272A00FECB92 /* DVB_DetailViewDataManagerTypes.h */,
@@ -396,7 +390,6 @@
 				468BFDEE14AD251C00FECB92 /* DVB_DetailViewNSUserDefaultsDataManager.h in Headers */,
 				468BFDF014AD251C00FECB92 /* DVB_DetailViewNullDataManager.h in Headers */,
 				468BFDF214AD251C00FECB92 /* DVB_DetailViewObjectDataManager.h in Headers */,
-				468BFDF514AD251C00FECB92 /* DetailViewEventNameCell.h in Headers */,
 				468BFDF614AD251C00FECB92 /* DVB_DetailView.h in Headers */,
 				468BFDF714AD251C00FECB92 /* DVB_DetailViewBuilder.h in Headers */,
 				468BFDF914AD251C00FECB92 /* DVB_DetailViewCellTypes.h in Headers */,
@@ -552,7 +545,6 @@
 				468BFDEF14AD251C00FECB92 /* DVB_DetailViewNSUserDefaultsDataManager.m in Sources */,
 				468BFDF114AD251C00FECB92 /* DVB_DetailViewNullDataManager.m in Sources */,
 				468BFDF314AD251C00FECB92 /* DVB_DetailViewObjectDataManager.m in Sources */,
-				468BFDF414AD251C00FECB92 /* DetailViewEventNameCell.m in Sources */,
 				468BFDF814AD251C00FECB92 /* DVB_DetailViewBuilder.m in Sources */,
 				468BFDFB14AD251C00FECB92 /* DVB_DetailViewDataManager.m in Sources */,
 				468BFDFD14AD251C00FECB92 /* DVB_DetailViewGroup.m in Sources */,
