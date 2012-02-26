@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4646678E14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4646678C14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.h */; };
+		4646678F14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4646678D14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.m */; };
+		4646679514F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4646679114F9B63100F9A0A8 /* DVB_DetailViewHtmlLabelCell.h */; };
+		4646679614F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4646679214F9B63200F9A0A8 /* DVB_DetailViewHtmlLabelCell.m */; };
+		4646679714F9B63300F9A0A8 /* DVB_DetailViewLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4646679314F9B63200F9A0A8 /* DVB_DetailViewLabelCell.h */; };
+		4646679814F9B63300F9A0A8 /* DVB_DetailViewLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4646679414F9B63200F9A0A8 /* DVB_DetailViewLabelCell.m */; };
 		466AEE9F14B1566900C6FFD5 /* TTGlobalUICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 466AEE9D14B1566900C6FFD5 /* TTGlobalUICommon.h */; };
 		466AEEA014B1566900C6FFD5 /* TTGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 466AEE9E14B1566900C6FFD5 /* TTGlobalUICommon.m */; };
 		466AEEA214B157E700C6FFD5 /* UIWindowAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 466AEEA114B157E700C6FFD5 /* UIWindowAdditions.m */; };
@@ -88,6 +94,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4646678C14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewImageButtonCell.h; sourceTree = "<group>"; };
+		4646678D14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewImageButtonCell.m; sourceTree = "<group>"; };
+		4646679114F9B63100F9A0A8 /* DVB_DetailViewHtmlLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewHtmlLabelCell.h; sourceTree = "<group>"; };
+		4646679214F9B63200F9A0A8 /* DVB_DetailViewHtmlLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewHtmlLabelCell.m; sourceTree = "<group>"; };
+		4646679314F9B63200F9A0A8 /* DVB_DetailViewLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewLabelCell.h; sourceTree = "<group>"; };
+		4646679414F9B63200F9A0A8 /* DVB_DetailViewLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewLabelCell.m; sourceTree = "<group>"; };
 		466AEE9D14B1566900C6FFD5 /* TTGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalUICommon.h; sourceTree = "<group>"; };
 		466AEE9E14B1566900C6FFD5 /* TTGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalUICommon.m; sourceTree = "<group>"; };
 		466AEEA114B157E700C6FFD5 /* UIWindowAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWindowAdditions.m; sourceTree = "<group>"; };
@@ -243,9 +255,9 @@
 			children = (
 				468BFDBE14AD251C00FECB92 /* Cell Classes */,
 				468BFDCB14AD251C00FECB92 /* Data Manager Classes */,
-				468BFDD514AD251C00FECB92 /* DetailViewEventNameCell.h */,
 				466AEEA514B15A6700C6FFD5 /* DVB_ExpandableTextView.h */,
 				466AEEA614B15A6700C6FFD5 /* DVB_ExpandableTextView.m */,
+				468BFDD514AD251C00FECB92 /* DetailViewEventNameCell.h */,
 				468BFDD414AD251C00FECB92 /* DetailViewEventNameCell.m */,
 				468BFDD614AD251C00FECB92 /* DVB_DetailView.h */,
 				468BFDD914AD251C00FECB92 /* DVB_DetailViewCellTypes.h */,
@@ -296,12 +308,18 @@
 			children = (
 				468BFDBF14AD251C00FECB92 /* DVB_DetailViewButtonCell.h */,
 				468BFDC014AD251C00FECB92 /* DVB_DetailViewButtonCell.m */,
+				4646678C14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.h */,
+				4646678D14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.m */,
 				468BFDC114AD251C00FECB92 /* DVB_DetailViewDateCell.h */,
 				468BFDC214AD251C00FECB92 /* DVB_DetailViewDateCell.m */,
 				468BFDC514AD251C00FECB92 /* DVB_DetailViewStringCell.h */,
 				468BFDC614AD251C00FECB92 /* DVB_DetailViewStringCell.m */,
 				468BFDC714AD251C00FECB92 /* DVB_DetailViewSwitchCell.h */,
 				468BFDC814AD251C00FECB92 /* DVB_DetailViewSwitchCell.m */,
+				4646679114F9B63100F9A0A8 /* DVB_DetailViewHtmlLabelCell.h */,
+				4646679214F9B63200F9A0A8 /* DVB_DetailViewHtmlLabelCell.m */,
+				4646679314F9B63200F9A0A8 /* DVB_DetailViewLabelCell.h */,
+				4646679414F9B63200F9A0A8 /* DVB_DetailViewLabelCell.m */,
 			);
 			path = "Cell Classes";
 			sourceTree = "<group>";
@@ -390,6 +408,9 @@
 				466AEEA414B157ED00C6FFD5 /* UIWindowAdditions.h in Headers */,
 				466AEEA714B15A6800C6FFD5 /* DVB_ExpandableTextView.h in Headers */,
 				466AEEAA14B15C9000C6FFD5 /* TTCorePreprocessorMacros.h in Headers */,
+				4646678E14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.h in Headers */,
+				4646679514F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.h in Headers */,
+				4646679714F9B63300F9A0A8 /* DVB_DetailViewLabelCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +560,9 @@
 				466AEEA014B1566900C6FFD5 /* TTGlobalUICommon.m in Sources */,
 				466AEEA214B157E700C6FFD5 /* UIWindowAdditions.m in Sources */,
 				466AEEA814B15A6800C6FFD5 /* DVB_ExpandableTextView.m in Sources */,
+				4646678F14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.m in Sources */,
+				4646679614F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.m in Sources */,
+				4646679814F9B63300F9A0A8 /* DVB_DetailViewLabelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +644,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -640,7 +664,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

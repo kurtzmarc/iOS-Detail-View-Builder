@@ -50,7 +50,7 @@
 
 -(NSString*) defaultNewRecordName
 {
-    return @"New Record";
+    return DEFAULT_NEW_RECORD_NAME;
 }
 
 @end

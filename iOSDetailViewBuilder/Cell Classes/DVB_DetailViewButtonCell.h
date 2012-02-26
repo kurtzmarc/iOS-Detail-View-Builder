@@ -11,8 +11,6 @@
 
 @class DVB_DetailViewDataManager, DVB_DetailViewDataManager;
 
-typedef void(^BlockAction)(void);
-
 @interface DVB_DetailViewButtonCell : DVB_DetailViewItem
 
 - (id)initWithLabel:(NSString *) labelString

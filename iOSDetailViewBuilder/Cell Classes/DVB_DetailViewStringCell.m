@@ -22,6 +22,7 @@
     self = [super initWithLabel:labelString withDataManager:dataManager withKey:key withController:controller withBuilder:builder];
     if (self) {
         _cellHeight = 0;
+        //if (NIInterfaceOrientation() == UIInterfaceOrientationLandscapeLeft || NIInterfaceOrientation() == UIInterfaceOrientationLandscapeRight) 
         if (TTDeviceOrientationIsLandscape())
             _cellWidth = TTIsPad() ? 515 : 340;
         else if (TTDeviceOrientationIsPortrait())

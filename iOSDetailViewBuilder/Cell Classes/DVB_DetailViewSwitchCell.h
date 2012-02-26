@@ -25,4 +25,6 @@
 
 - (void) onSwitch:(id) sender;
 
+@property (nonatomic, copy) BlockAction onSwitch;
+
 @end

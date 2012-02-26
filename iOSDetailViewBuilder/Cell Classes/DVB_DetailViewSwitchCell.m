@@ -13,6 +13,8 @@
 
 @implementation DVB_DetailViewSwitchCell
 
+@synthesize onSwitch = _onSwitch;
+
 #define GROUPED_CELL_WIDTH 300
 #define CELL_PADDING 5
 
@@ -25,6 +27,7 @@
     self = [super initWithLabel:labelString withDataManager:dataManager withKey:key withController:controller withBuilder:builder];
     if (self) {
         _cellHeight = 0;
+        //if (NIInterfaceOrientation() == UIInterfaceOrientationLandscapeLeft || NIInterfaceOrientation() == UIInterfaceOrientationLandscapeRight)        
         if (TTDeviceOrientationIsLandscape())
             _cellWidth = TTIsPad() ? 515 : 340;
         else if (TTDeviceOrientationIsPortrait())
@@ -71,6 +74,8 @@
 {
     UISwitch* switchControl = (UISwitch*) sender;
     [self.dataManager setValue:[NSNumber numberWithBool:switchControl.isOn] forItem:self];
+    if (self.onSwitch)
+        self.onSwitch();
 }
 
 - (void) configureCell:(UITableViewCell*) cell

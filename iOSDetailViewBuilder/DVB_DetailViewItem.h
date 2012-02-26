@@ -13,6 +13,9 @@
 #define kButtonTag          3
 #define kActivityIndicator  4
 #define kSwitchTag          5
+#define kImageViewTag       6
+
+typedef void(^BlockAction)(void);
 
 @class DVB_DetailViewBuilder, DVB_DetailViewDataManager;
 
