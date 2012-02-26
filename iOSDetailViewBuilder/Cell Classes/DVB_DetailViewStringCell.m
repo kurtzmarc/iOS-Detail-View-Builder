@@ -10,8 +10,18 @@
 #import "DVB_DetailViewDataManager.h"
 #import "DVB_DetailViewBuilder.h"
 #import "TTGlobalUICommon.h"
+#import "Face_ChartsAppDelegate.h"
 
 @implementation DVB_DetailViewStringCell
+
+@synthesize autocapitalizationType = _autocapitalizationType;
+@synthesize autocorrectionType = _autocorrectionType;
+@synthesize enablesReturnKeyAutomatically = _enablesReturnKeyAutomatically;
+@synthesize keyboardAppearance = _keyboardAppearance;
+@synthesize keyboardType = _keyboardType;
+@synthesize returnKeyType = _returnKeyType;
+@synthesize secureTextEntry = _secureTextEntry;
+@synthesize spellCheckingType = _spellCheckingType;
 
 - (id)initWithLabel:(NSString *) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
@@ -27,6 +37,14 @@
             _cellWidth = TTIsPad() ? 515 : 340;
         else if (TTDeviceOrientationIsPortrait())
             _cellWidth = TTIsPad() ? 576 : 180;
+        _autocapitalizationType = UITextAutocapitalizationTypeSentences;
+        _autocorrectionType = UITextAutocorrectionTypeDefault;
+        _enablesReturnKeyAutomatically = NO;
+        _keyboardAppearance = UIKeyboardAppearanceDefault;
+        _keyboardType = UIKeyboardTypeDefault;
+        _returnKeyType = UIReturnKeyDone;
+        _secureTextEntry = NO;
+        _spellCheckingType = UITextSpellCheckingTypeDefault;
     }
     return self;
 }
@@ -60,6 +78,18 @@
     NSString* value = (NSString*)[self.dataManager getValue:self];
     UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
     textView.text = value;
+    textView.autocapitalizationType = self.autocapitalizationType;
+    textView.autocorrectionType = self.autocorrectionType;
+    textView.enablesReturnKeyAutomatically = self.enablesReturnKeyAutomatically;
+    textView.keyboardAppearance = self.keyboardAppearance;
+    textView.keyboardType = self.keyboardType;
+    textView.returnKeyType = self.returnKeyType;
+    textView.secureTextEntry = self.secureTextEntry;
+    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0"))
+    {
+        textView.spellCheckingType = self.spellCheckingType;
+    }
+    
     [self adjustTextView:textView];
 
     UILabel* label = (UILabel*) [cell viewWithTag:kLabelTag];

@@ -88,7 +88,7 @@
     textField.delegate = delegate;
     textField.font = [UIFont boldSystemFontOfSize:15];
     textField.tag = kTextFieldTag;
-    textField.returnKeyType = UIReturnKeyDone;
+    //textField.returnKeyType = UIReturnKeyDone;
     textField.autoresizingMask =  UIViewAutoresizingFlexibleWidth;// | UIViewAutoresizingFlexibleHeight ;
     //textField.enablesReturnKeyAutomatically = YES;
     [cell.contentView addSubview:textField];
