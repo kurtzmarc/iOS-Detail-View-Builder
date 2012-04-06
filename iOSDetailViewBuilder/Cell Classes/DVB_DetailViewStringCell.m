@@ -10,7 +10,6 @@
 #import "DVB_DetailViewDataManager.h"
 #import "DVB_DetailViewBuilder.h"
 #import "TTGlobalUICommon.h"
-#import "Face_ChartsAppDelegate.h"
 
 @implementation DVB_DetailViewStringCell
 
@@ -85,7 +84,7 @@
     textView.keyboardType = self.keyboardType;
     textView.returnKeyType = self.returnKeyType;
     textView.secureTextEntry = self.secureTextEntry;
-    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0"))
+    if (TTOSVersionIsAtLeast(5.0))
     {
         textView.spellCheckingType = self.spellCheckingType;
     }
