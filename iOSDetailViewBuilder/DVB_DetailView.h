@@ -12,5 +12,6 @@
 #import "DVB_DetailViewBuilder.h"
 #import "DVB_DetailViewGroup.h"
 #import "DVB_DetailViewDataManager.h"
+#import "DVB_DetailViewItem.h"
 
 #endif
