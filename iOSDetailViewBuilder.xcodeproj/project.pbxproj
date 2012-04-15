@@ -104,11 +104,11 @@
 		466AEE9E14B1566900C6FFD5 /* TTGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalUICommon.m; sourceTree = "<group>"; };
 		466AEEA114B157E700C6FFD5 /* UIWindowAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWindowAdditions.m; sourceTree = "<group>"; };
 		466AEEA314B157ED00C6FFD5 /* UIWindowAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWindowAdditions.h; sourceTree = "<group>"; };
-		466AEEA514B15A6700C6FFD5 /* DVB_ExpandableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_ExpandableTextView.h; sourceTree = "<group>"; };
-		466AEEA614B15A6700C6FFD5 /* DVB_ExpandableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_ExpandableTextView.m; sourceTree = "<group>"; };
+		466AEEA514B15A6700C6FFD5 /* DVB_ExpandableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DVB_ExpandableTextView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		466AEEA614B15A6700C6FFD5 /* DVB_ExpandableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DVB_ExpandableTextView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		466AEEA914B15C8F00C6FFD5 /* TTCorePreprocessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCorePreprocessorMacros.h; sourceTree = "<group>"; };
-		46738895152E9D3500496E7E /* BaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDetailViewController.h; sourceTree = "<group>"; };
-		46738896152E9D3500496E7E /* BaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDetailViewController.m; sourceTree = "<group>"; };
+		46738895152E9D3500496E7E /* BaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BaseDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		46738896152E9D3500496E7E /* BaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BaseDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		468BFD0714AD22A800FECB92 /* libiOSDetailViewBuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOSDetailViewBuilder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		468BFD0A14AD22A800FECB92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		468BFD0E14AD22A800FECB92 /* iOSDetailViewBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDetailViewBuilder-Prefix.pch"; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 		468BFD1814AD22A800FECB92 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		468BFD2214AD22A800FECB92 /* iOSDetailViewBuilderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSDetailViewBuilderTests-Info.plist"; sourceTree = "<group>"; };
 		468BFD2414AD22A800FECB92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		468BFD2614AD22A800FECB92 /* iOSDetailViewBuilderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSDetailViewBuilderTests.h; sourceTree = "<group>"; };
-		468BFD2714AD22A800FECB92 /* iOSDetailViewBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSDetailViewBuilderTests.m; sourceTree = "<group>"; };
+		468BFD2614AD22A800FECB92 /* iOSDetailViewBuilderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = iOSDetailViewBuilderTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		468BFD2714AD22A800FECB92 /* iOSDetailViewBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = iOSDetailViewBuilderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		468BFDBF14AD251C00FECB92 /* DVB_DetailViewButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewButtonCell.h; sourceTree = "<group>"; };
 		468BFDC014AD251C00FECB92 /* DVB_DetailViewButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewButtonCell.m; sourceTree = "<group>"; };
 		468BFDC114AD251C00FECB92 /* DVB_DetailViewDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewDateCell.h; sourceTree = "<group>"; };
@@ -155,18 +155,18 @@
 		46D3027A14B9280D00D473B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		46D3027E14B9280D00D473B2 /* iOSDetailViewBuilderDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSDetailViewBuilderDemo-Info.plist"; sourceTree = "<group>"; };
 		46D3028014B9280D00D473B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		46D3028214B9280D00D473B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46D3028214B9280D00D473B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		46D3028414B9280D00D473B2 /* iOSDetailViewBuilderDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDetailViewBuilderDemo-Prefix.pch"; sourceTree = "<group>"; };
-		46D3028514B9280D00D473B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46D3028614B9280D00D473B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		46D3028514B9280D00D473B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		46D3028614B9280D00D473B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		46D3028914B9280D00D473B2 /* iOSDetailViewBuilderDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSDetailViewBuilderDemo.xcdatamodel; sourceTree = "<group>"; };
 		46D302D314B92B2000D473B2 /* NSUserDefaultsDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsDemoController.h; sourceTree = "<group>"; };
 		46D302D414B92B2000D473B2 /* NSUserDefaultsDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsDemoController.m; sourceTree = "<group>"; };
 		46D302D514B92B2000D473B2 /* NSUserDefaultsDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSUserDefaultsDemoController.xib; sourceTree = "<group>"; };
 		46D302DA14B92CE200D473B2 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		46D302DB14B92CE200D473B2 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		46D302DD14B92CFF00D473B2 /* CoreDataDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataDemoController.h; sourceTree = "<group>"; };
-		46D302DE14B92CFF00D473B2 /* CoreDataDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataDemoController.m; sourceTree = "<group>"; };
+		46D302DD14B92CFF00D473B2 /* CoreDataDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreDataDemoController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		46D302DE14B92CFF00D473B2 /* CoreDataDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreDataDemoController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		46D302DF14B92CFF00D473B2 /* CoreDataDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataDemoController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

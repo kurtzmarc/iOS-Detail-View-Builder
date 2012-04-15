@@ -1,6 +1,6 @@
 //
 //  DVB_DetailViewBuilder.h
-//  Face Charts
+//  iOSDetailViewBuilder
 //
 //  Created by Marc Kurtz on 12/30/11.
 //  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.

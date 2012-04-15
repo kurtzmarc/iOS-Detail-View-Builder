@@ -3,7 +3,7 @@
 //  iOSDetailViewBuilderDemo
 //
 //  Created by Marc Kurtz on 1/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Kurtz Consulting Services LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
