@@ -12,14 +12,6 @@
 #import "../iOSDetailViewBuilder/DVB_DetailViewCellTypes.h"
 #import "Person.h"
 
-@interface CoreDataDemoController (){
-@private
-    DVB_DetailViewBuilder* _builder;
-    DVB_DetailViewCoreDataDataManager* _dataManager;
-}
-
-@end
-
 @implementation CoreDataDemoController
 
 @synthesize person = _person;
@@ -35,15 +27,15 @@
 
 -(void) setPerson:(Person *)person
 {
-    [_builder requestEndEditing];
+    [self.builder requestEndEditing];
     
     if (_person != nil)
     {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
     _person = person;
-    if (_dataManager != nil)
-        _dataManager.managedObject = _person;
+    if (self.dataManager != nil)
+        ((DVB_DetailViewCoreDataDataManager*)self.dataManager).managedObject = _person;
     
     if (_person != nil)
     {
@@ -79,26 +71,26 @@
 {
     [super viewDidLoad];
 
-    _builder = [[DVB_DetailViewBuilder alloc] init];
+    self.builder = [[DVB_DetailViewBuilder alloc] init];
     
-    _dataManager = [[DVB_DetailViewCoreDataDataManager alloc] initWithManagedObject:self.person];
+    self.dataManager = [[DVB_DetailViewCoreDataDataManager alloc] initWithManagedObject:self.person];
     
     DVB_DetailViewGroup* group;
     DVB_DetailViewItem* item;
     
     // Group 1
-    group = [[DVB_DetailViewGroup alloc] initWithTitle:@"Person" withBuilder:_builder];
+    group = [[DVB_DetailViewGroup alloc] initWithTitle:@"Person" withBuilder:self.builder];
     
-    item = [[DVB_DetailViewStringCell alloc] initWithLabel:@"Name" withDataManager:_dataManager withKey:@"name" withController:self withBuilder:_builder];
+    item = [[DVB_DetailViewStringCell alloc] initWithLabel:@"Name" withDataManager:self.dataManager withKey:@"name" withController:self withBuilder:self.builder];
     [group addDetailViewItem:item];
     
-    item = [[DVB_DetailViewDateCell alloc] initWithLabel:@"Birth Date" withDataManager:_dataManager withKey:@"birthdate" withController:self withBuilder:_builder];
+    item = [[DVB_DetailViewDateCell alloc] initWithLabel:@"Birth Date" withDataManager:self.dataManager withKey:@"birthdate" withController:self withBuilder:self.builder];
     [group addDetailViewItem:item];
     
-    item = [[DVB_DetailViewSwitchCell alloc] initWithLabel:@"Birth Date Alarm" withDataManager:_dataManager withKey:@"birthdatealarm" withController:self withBuilder:_builder];
+    item = [[DVB_DetailViewSwitchCell alloc] initWithLabel:@"Birth Date Alarm" withDataManager:self.dataManager withKey:@"birthdatealarm" withController:self withBuilder:self.builder];
     [group addDetailViewItem:item];
     
-    [_builder addDetailViewBuilderGroup:group];
+    [self.builder addDetailViewBuilderGroup:group];
 }
 
 - (void)viewDidUnload
@@ -107,58 +99,6 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     self.person = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [_builder groupCount];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [_builder groupItemCount:section];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
-    return [_builder heightForIndexPath:indexPath ];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DVB_DetailViewItem* item = [_builder itemForIndexPath:indexPath];
-    
-    NSString *CellIdentifier = [item cellIdentifier];
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [item createCell];
-    }
-    
-    [item configureCell:cell];
-    return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return [_builder groupTitleForSection:section];
-}
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DVB_DetailViewItem* item = [_builder itemForIndexPath:indexPath];
-    
-    [item didSelectCell:indexPath];
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

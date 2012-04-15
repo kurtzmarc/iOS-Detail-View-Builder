@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseDetailViewController.h"
 
 @class Person;
 
-@interface CoreDataDemoController : UITableViewController
+@interface CoreDataDemoController : BaseDetailViewController
 
 @property (nonatomic, strong) Person* person;
 

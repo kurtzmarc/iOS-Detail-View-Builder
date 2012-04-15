@@ -20,6 +20,8 @@
 		466AEEA714B15A6800C6FFD5 /* DVB_ExpandableTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 466AEEA514B15A6700C6FFD5 /* DVB_ExpandableTextView.h */; };
 		466AEEA814B15A6800C6FFD5 /* DVB_ExpandableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 466AEEA614B15A6700C6FFD5 /* DVB_ExpandableTextView.m */; };
 		466AEEAA14B15C9000C6FFD5 /* TTCorePreprocessorMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 466AEEA914B15C8F00C6FFD5 /* TTCorePreprocessorMacros.h */; };
+		46738897152E9D3500496E7E /* BaseDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 46738895152E9D3500496E7E /* BaseDetailViewController.h */; };
+		46738898152E9D3500496E7E /* BaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46738896152E9D3500496E7E /* BaseDetailViewController.m */; };
 		468BFD0B14AD22A800FECB92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD0A14AD22A800FECB92 /* Foundation.framework */; };
 		468BFD1914AD22A800FECB92 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD1814AD22A800FECB92 /* SenTestingKit.framework */; };
 		468BFD1C14AD22A800FECB92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468BFD0A14AD22A800FECB92 /* Foundation.framework */; };
@@ -105,6 +107,8 @@
 		466AEEA514B15A6700C6FFD5 /* DVB_ExpandableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_ExpandableTextView.h; sourceTree = "<group>"; };
 		466AEEA614B15A6700C6FFD5 /* DVB_ExpandableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_ExpandableTextView.m; sourceTree = "<group>"; };
 		466AEEA914B15C8F00C6FFD5 /* TTCorePreprocessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCorePreprocessorMacros.h; sourceTree = "<group>"; };
+		46738895152E9D3500496E7E /* BaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDetailViewController.h; sourceTree = "<group>"; };
+		46738896152E9D3500496E7E /* BaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDetailViewController.m; sourceTree = "<group>"; };
 		468BFD0714AD22A800FECB92 /* libiOSDetailViewBuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOSDetailViewBuilder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		468BFD0A14AD22A800FECB92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		468BFD0E14AD22A800FECB92 /* iOSDetailViewBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDetailViewBuilder-Prefix.pch"; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 				468BFDDD14AD251C00FECB92 /* DVB_DetailViewGroup.m */,
 				468BFDDE14AD251C00FECB92 /* DVB_DetailViewItem.h */,
 				468BFDDF14AD251C00FECB92 /* DVB_DetailViewItem.m */,
+				46738895152E9D3500496E7E /* BaseDetailViewController.h */,
+				46738896152E9D3500496E7E /* BaseDetailViewController.m */,
 				466AEEAB14B15CB300C6FFD5 /* Three20 */,
 				468BFD0D14AD22A800FECB92 /* Supporting Files */,
 			);
@@ -404,6 +410,7 @@
 				4646678E14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.h in Headers */,
 				4646679514F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.h in Headers */,
 				4646679714F9B63300F9A0A8 /* DVB_DetailViewLabelCell.h in Headers */,
+				46738897152E9D3500496E7E /* BaseDetailViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +562,7 @@
 				4646678F14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.m in Sources */,
 				4646679614F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.m in Sources */,
 				4646679814F9B63300F9A0A8 /* DVB_DetailViewLabelCell.m in Sources */,
+				46738898152E9D3500496E7E /* BaseDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

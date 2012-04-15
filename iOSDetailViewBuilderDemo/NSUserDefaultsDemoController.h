@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseDetailViewController.h"
 
-@interface NSUserDefaultsDemoController : UITableViewController
+@interface NSUserDefaultsDemoController : BaseDetailViewController
 
 @end
