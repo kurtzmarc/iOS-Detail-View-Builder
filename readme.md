@@ -9,7 +9,7 @@ Quickstart
 ------------
 The general idea is that you create a data manager for the type of data you want to use (Core Data, NSUserDefaults, NSObject), and then create detail view cells for the table view. The cells are put into groups, and the groups are put into the detail view builder object along with the data manager object.
 
-Please view the demo project (coming soon...) for a detailed example of how to use the library.
+Please view the demo project for a detailed example of how to use the library.
 
 TODO
 ----
