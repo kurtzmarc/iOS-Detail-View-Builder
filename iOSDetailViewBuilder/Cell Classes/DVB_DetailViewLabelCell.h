@@ -13,5 +13,6 @@
 - (UITableViewCell*) createLabelCell;
 
 @property (strong, nonatomic) UIFont* font;
+@property (assign, nonatomic) CGSize textInset;
 
 @end

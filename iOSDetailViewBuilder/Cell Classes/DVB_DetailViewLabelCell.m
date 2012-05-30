@@ -9,12 +9,10 @@
 #import "DVB_DetailViewLabelCell.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define GROUPED_CELL_WIDTH 320
-#define CELL_PADDING 5
-
 @implementation DVB_DetailViewLabelCell
 
 @synthesize font = _font;
+@synthesize textInset = _textInset;
 
 - (id)initWithLabel:(NSString*) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
@@ -25,6 +23,7 @@
     self = [super initWithLabel:labelString withDataManager:dataManager withKey:key withController:controller withBuilder:builder];
     if (self) {
         _font = [UIFont systemFontOfSize:12];
+        _textInset = CGSizeMake(5, 5);
     }
     return self;
 }
@@ -44,8 +43,8 @@
 
 -(CGFloat)height
 {
-    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (CELL_PADDING * 2), CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
-    return textSize.height + 10;
+    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (self.textInset.width * 2), CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+    return textSize.height + (self.textInset.height * 2);
 }
 
 - (void) configureCell:(UITableViewCell*) cell
@@ -65,7 +64,7 @@
     
     // Add label
     CGRect labelRect = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
-    labelRect = CGRectInset(labelRect, CELL_PADDING, CELL_PADDING);
+    labelRect = CGRectInset(labelRect, self.textInset.width, self.textInset.height);
     UILabel* label = [[UILabel alloc] initWithFrame:labelRect];
     label.lineBreakMode = UILineBreakModeWordWrap;
     label.numberOfLines = 0;
