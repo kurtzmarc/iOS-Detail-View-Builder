@@ -14,7 +14,7 @@
 
 @implementation DVB_DetailViewLabelCell
 
-@synthesize fontSize = _fontSize;
+@synthesize font = _font;
 
 - (id)initWithLabel:(NSString*) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
@@ -24,7 +24,7 @@
 {
     self = [super initWithLabel:labelString withDataManager:dataManager withKey:key withController:controller withBuilder:builder];
     if (self) {
-        _fontSize = 12;
+        _font = [UIFont systemFontOfSize:12];
     }
     return self;
 }
@@ -44,14 +44,14 @@
 
 -(CGFloat)height
 {
-    CGSize textSize = [self.label sizeWithFont:[UIFont systemFontOfSize:self.fontSize] constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (CELL_PADDING * 2), CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (CELL_PADDING * 2), CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
     return textSize.height + 10;
 }
 
 - (void) configureCell:(UITableViewCell*) cell
 {
     UILabel* label = (UILabel*)[cell.contentView viewWithTag:kLabelTag];
-    label.font = [UIFont systemFontOfSize:self.fontSize];
+    label.font = self.font;
     label.text = self.label;
 }
 
@@ -72,7 +72,7 @@
     label.text = self.label;
     label.tag = kLabelTag;
     //label.textColor = [UIColor colorWithRed:0.32 green:0.40 blue:0.57 alpha:1.0];
-    label.font = [UIFont systemFontOfSize:self.fontSize];
+    label.font = self.font;
     label.textAlignment = UITextAlignmentLeft;
     label.backgroundColor = [UIColor clearColor];
     label.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

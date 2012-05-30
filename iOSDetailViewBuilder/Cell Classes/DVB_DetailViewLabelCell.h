@@ -12,6 +12,6 @@
 
 - (UITableViewCell*) createLabelCell;
 
-@property (assign, nonatomic) int fontSize;
+@property (strong, nonatomic) UIFont* font;
 
 @end
