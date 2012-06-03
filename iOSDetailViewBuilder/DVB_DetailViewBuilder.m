@@ -54,7 +54,7 @@
 
 -(DVB_DetailViewItem*) itemForIndexPath:(NSIndexPath*) index
 {
-    DVB_DetailViewGroup* group = [self.groupArray objectAtIndex:index.section];
+    DVB_DetailViewGroup* group = [self groupForSection:index.section];
     return group == nil ? nil : [group itemForIndex:index.row];
 }
 
@@ -69,7 +69,12 @@
     return nil;
 }
 
--(NSString*) groupTitleForSection:(NSUInteger) section
+- (DVB_DetailViewGroup*) groupForSection:(NSInteger) section
+{
+   return [self.groupArray objectAtIndex:section];
+}
+
+- (NSString*) groupTitleForSection:(NSUInteger) section
 {
     DVB_DetailViewGroup* group = [self.groupArray objectAtIndex:section];
     return group == nil ? @"" : group.title;

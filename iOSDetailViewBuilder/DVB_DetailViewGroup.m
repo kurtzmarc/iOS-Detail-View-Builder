@@ -12,6 +12,7 @@
 @implementation DVB_DetailViewGroup
 
 @synthesize title = _title;
+@synthesize footerText = _footerText;
 @synthesize builder = _builder;
 @synthesize groupItemArray = _groupItemArray;
 

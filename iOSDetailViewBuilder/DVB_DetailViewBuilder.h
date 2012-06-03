@@ -22,6 +22,7 @@
 - (NSInteger) groupItemCount:(NSUInteger)section;
 - (NSObject*) valueForIndexPath:(NSIndexPath*) index;
 - (DVB_DetailViewItem*) itemForIndexPath:(NSIndexPath*) index;
+- (DVB_DetailViewGroup*) groupForSection:(NSInteger) section;
 - (NSString*) groupTitleForSection:(NSUInteger) section;
 - (CGFloat) heightForIndexPath:(NSIndexPath *)indexPath;
 - (NSIndexPath*) indexPathForItem:(DVB_DetailViewItem*) item;
