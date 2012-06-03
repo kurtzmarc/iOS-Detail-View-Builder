@@ -64,7 +64,7 @@
     
     // Add label
     CGRect labelRect = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
-    labelRect = CGRectInset(labelRect, self.textInset.width, self.textInset.height);
+    labelRect = CGRectInset(labelRect, self.textInset.width, 0);
     UILabel* label = [[UILabel alloc] initWithFrame:labelRect];
     label.lineBreakMode = UILineBreakModeWordWrap;
     label.numberOfLines = 0;
