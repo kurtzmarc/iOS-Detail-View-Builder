@@ -89,6 +89,8 @@
     
     item = [[DVB_DetailViewSwitchCell alloc] initWithLabel:@"Birth Date Alarm" withDataManager:self.dataManager withKey:@"birthdatealarm" withController:self withBuilder:self.builder];
     [group addDetailViewItem:item];
+
+    group.footerText = @"Footer text can be added too!";
     
     [self.builder addDetailViewBuilderGroup:group];
 }

@@ -53,6 +53,8 @@
     item = [[DVB_DetailViewButtonCell alloc] initWithLabel:@"Button Cell" withDataManager:self.dataManager withKey:@"" withController:self withBuilder:self.builder];
     [group addDetailViewItem:item];
     
+    group.footerText = @"Footer text can be added too!";
+    
     [self.builder addDetailViewBuilderGroup:group];
     
     // Group 2

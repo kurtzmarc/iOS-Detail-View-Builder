@@ -93,4 +93,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    DVB_DetailViewGroup* group = [_builder groupForSection:section];
+    return group.footerText;
+}
+
 @end
