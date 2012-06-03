@@ -7,6 +7,7 @@
 //
 
 #import "DVB_DetailViewNullDataManager.h"
+#import "DVB_DetailViewItem.h"
 
 @implementation DVB_DetailViewNullDataManager
 
@@ -22,6 +23,12 @@
 
 -(NSObject *)getValue:(DVB_DetailViewItem*) item;
 {
+    if ([KEY_TRUE isEqualToString:item.key])
+        return [NSNumber numberWithBool:YES];
+
+    if ([KEY_FALSE isEqualToString:item.key])
+        return [NSNumber numberWithBool:NO];
+
     return nil;
 }
 
