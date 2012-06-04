@@ -43,7 +43,8 @@
 
 -(CGFloat)height
 {
-    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (self.textInset.width * 2), CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+    // -20 because we are dealing with grouped table cells.
+    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (self.textInset.width * 2) - 20, CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
     return textSize.height + (self.textInset.height * 2);
 }
 
