@@ -38,6 +38,8 @@
     UITableViewCell* cell;
     
     cell = [self createLabelCell];
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
     return cell;
 }
 
@@ -53,6 +55,7 @@
     UILabel* label = (UILabel*)[cell.contentView viewWithTag:kLabelTag];
     label.font = self.font;
     label.text = self.label;
+    [super configureCell:cell];
 }
 
 - (UITableViewCell*) createLabelCell {

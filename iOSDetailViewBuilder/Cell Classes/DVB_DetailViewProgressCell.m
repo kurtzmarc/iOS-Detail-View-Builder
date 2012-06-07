@@ -1,15 +1,14 @@
 //
-//  DVB_DetailViewButtonCell.m
+//  DVB_DetailViewProgressCell.m
 //  iOSDetailViewBuilder
 //
-//  Created by Marc Kurtz on 12/30/11.
-//  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
+//  Created by Marc Kurtz on 6/6/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DVB_DetailViewButtonCell.h"
-#import "DVB_DetailView.h"
+#import "DVB_DetailViewProgressCell.h"
 
-@implementation DVB_DetailViewButtonCell
+@implementation DVB_DetailViewProgressCell
 
 - (id)initWithLabel:(NSString *) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
@@ -26,7 +25,7 @@
 
 - (NSString*)cellIdentifier
 {
-    return @"BuilderButtonCell";
+    return @"BuilderProgressCell";
 }
 
 - (UITableViewCell*) createCell
@@ -35,6 +34,9 @@
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
     cell.textLabel.textAlignment = UITextAlignmentCenter;
+    UIActivityIndicatorView* activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [activityIndicator startAnimating];
+    cell.accessoryView = activityIndicator;
     if (self.onCellCreated)
         self.onCellCreated(cell);
     return cell;

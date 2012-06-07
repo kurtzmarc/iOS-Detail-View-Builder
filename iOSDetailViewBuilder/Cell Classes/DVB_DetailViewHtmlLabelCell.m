@@ -22,6 +22,8 @@ int height;
     UITableViewCell* cell;
     
     cell = [self createLabelCell];
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
     return cell;
 }
 
@@ -48,6 +50,7 @@ int height;
     CGRect textSize = [label textRectForBounds:CGRectMake(0, 0, 300, CGFLOAT_MAX) limitedToNumberOfLines:0];
     height = textSize.size.height;
     label.bounds = textSize;
+    [super configureCell:cell];
 }
 
 #define GROUPED_CELL_WIDTH 300

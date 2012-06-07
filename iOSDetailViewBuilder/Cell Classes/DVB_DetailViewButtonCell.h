@@ -19,6 +19,4 @@
      withController:(UITableViewController*) controller
         withBuilder:(DVB_DetailViewBuilder*) builder;
 
-@property (nonatomic, copy) BlockAction onClick;
-
 @end

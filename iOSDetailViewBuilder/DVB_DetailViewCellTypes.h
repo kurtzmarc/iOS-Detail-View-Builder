@@ -16,5 +16,6 @@
 #import "Cell Classes/DVB_DetailViewImageButtonCell.h"
 #import "Cell Classes/DVB_DetailViewHtmlLabelCell.h"
 #import "Cell Classes/DVB_DetailViewLabelCell.h"
+#import "Cell Classes/DVB_DetailViewProgressCell.h"
 
 #endif

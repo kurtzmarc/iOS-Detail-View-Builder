@@ -16,6 +16,7 @@
 #define kImageViewTag       6
 
 typedef void(^BlockAction)(void);
+typedef void(^CellBlock)(UITableViewCell* cell);
 
 @class DVB_DetailViewBuilder, DVB_DetailViewDataManager;
 
@@ -28,6 +29,9 @@ typedef void(^BlockAction)(void);
 @property (nonatomic, strong) NSString* key;
 @property (nonatomic, strong) UITableViewController* tableViewController;
 @property (nonatomic, strong) DVB_DetailViewBuilder* builder;
+@property (nonatomic, copy) BlockAction onSelectCell;
+@property (nonatomic, copy) CellBlock onConfigureCell;
+@property (nonatomic, copy) CellBlock onCellCreated;
 
 - (id)initWithLabel:(NSString *)labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager

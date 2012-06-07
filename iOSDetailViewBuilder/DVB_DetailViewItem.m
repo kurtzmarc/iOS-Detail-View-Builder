@@ -22,6 +22,9 @@
 @synthesize key = _key;
 @synthesize tableViewController = _tableViewController;
 @synthesize builder = _builder;
+@synthesize onSelectCell = _onSelectCell;
+@synthesize onConfigureCell = _onConfigureCell;
+@synthesize onCellCreated = _onCellCreated;
 
 - (id)initWithLabel:(NSString*) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
@@ -98,12 +101,14 @@
 
 - (void) configureCell:(UITableViewCell*) cell
 {
-    @throw [NSException exceptionWithName:@"InternalCodingException" reason:@"Internal coding exception - 'configureCell' method not implemented in class." userInfo:nil];
+    if (self.onConfigureCell)
+        self.onConfigureCell(cell);
 }
 
 - (void) didSelectCell:(NSIndexPath*)indexPath
 {
-    @throw [NSException exceptionWithName:@"InternalCodingException" reason:@"Internal coding exception - 'didSelectCell' method not implemented in class." userInfo:nil];
+    if (self.onSelectCell)
+        self.onSelectCell();
 }
 
 - (void) requestEndEditing

@@ -44,6 +44,8 @@
     CGRect textViewFrame = textView.frame;
     textViewFrame.size.width += 25;
     textView.frame = textViewFrame;
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
     return cell;
 }
 
@@ -59,6 +61,7 @@
     textView.text = dateStr;
     UILabel* label = (UILabel*) [cell viewWithTag:kLabelTag];
     label.text = self.label;
+    [super configureCell:cell];
 }
 
 - (void) didSelectCell:(NSIndexPath*)indexPath
@@ -129,7 +132,7 @@
         [actionSheet showInView:self.tableViewController.view];
         [actionSheet setBounds:CGRectMake(0, 0, self.tableViewController.view.bounds.size.width, 464)];
     }
-    
+    [super onSelectCell];
 }
 
 -(IBAction)datePickerCancelClick

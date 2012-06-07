@@ -67,6 +67,8 @@
     switchControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
     [cell.contentView addSubview:switchControl];
     
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
     return cell;
 }
 
@@ -89,11 +91,7 @@
     UILabel* label = (UILabel*) [cell viewWithTag:kLabelTag];
     label.text = self.label;
     [label sizeToFit];
-}
-
--(void)didSelectCell:(NSIndexPath *)indexPath
-{
-    // Do nothing...
+    [super configureCell:cell];
 }
 
 @end

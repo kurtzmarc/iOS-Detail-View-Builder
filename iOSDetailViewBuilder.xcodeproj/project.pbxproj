@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		462089EE1580396200275522 /* DVB_DetailViewProgressCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 462089EC1580396200275522 /* DVB_DetailViewProgressCell.h */; };
+		462089EF1580396200275522 /* DVB_DetailViewProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 462089ED1580396200275522 /* DVB_DetailViewProgressCell.m */; };
 		4646678E14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4646678C14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.h */; };
 		4646678F14F9B56700F9A0A8 /* DVB_DetailViewImageButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4646678D14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.m */; };
 		4646679514F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4646679114F9B63100F9A0A8 /* DVB_DetailViewHtmlLabelCell.h */; };
@@ -94,6 +96,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		462089EC1580396200275522 /* DVB_DetailViewProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewProgressCell.h; sourceTree = "<group>"; };
+		462089ED1580396200275522 /* DVB_DetailViewProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewProgressCell.m; sourceTree = "<group>"; };
 		4646678C14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewImageButtonCell.h; sourceTree = "<group>"; };
 		4646678D14F9B56600F9A0A8 /* DVB_DetailViewImageButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVB_DetailViewImageButtonCell.m; sourceTree = "<group>"; };
 		4646679114F9B63100F9A0A8 /* DVB_DetailViewHtmlLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVB_DetailViewHtmlLabelCell.h; sourceTree = "<group>"; };
@@ -320,6 +324,8 @@
 				4646679214F9B63200F9A0A8 /* DVB_DetailViewHtmlLabelCell.m */,
 				4646679314F9B63200F9A0A8 /* DVB_DetailViewLabelCell.h */,
 				4646679414F9B63200F9A0A8 /* DVB_DetailViewLabelCell.m */,
+				462089EC1580396200275522 /* DVB_DetailViewProgressCell.h */,
+				462089ED1580396200275522 /* DVB_DetailViewProgressCell.m */,
 			);
 			path = "Cell Classes";
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				4646679514F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.h in Headers */,
 				4646679714F9B63300F9A0A8 /* DVB_DetailViewLabelCell.h in Headers */,
 				46738897152E9D3500496E7E /* BaseDetailViewController.h in Headers */,
+				462089EE1580396200275522 /* DVB_DetailViewProgressCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +570,7 @@
 				4646679614F9B63300F9A0A8 /* DVB_DetailViewHtmlLabelCell.m in Sources */,
 				4646679814F9B63300F9A0A8 /* DVB_DetailViewLabelCell.m in Sources */,
 				46738898152E9D3500496E7E /* BaseDetailViewController.m in Sources */,
+				462089EF1580396200275522 /* DVB_DetailViewProgressCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

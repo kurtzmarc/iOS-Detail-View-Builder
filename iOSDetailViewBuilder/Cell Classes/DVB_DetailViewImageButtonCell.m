@@ -22,6 +22,8 @@
     UITableViewCell* cell;
     
     cell = [self createImageButtonCell];
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
     return cell;
 }
 
@@ -31,6 +33,8 @@
     UIImageView* imageView = (UIImageView*)[cell.contentView viewWithTag:kImageViewTag];
     label.text = self.label;
     imageView.image = self.image;
+    [super configureCell:cell];
+    cell.textLabel.text = nil;
 }
 
 #define GROUPED_CELL_WIDTH 300

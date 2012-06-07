@@ -67,6 +67,8 @@
     UITableViewCell* cell = [self createStockCellWithDelegate:self isEditable:YES];
     UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
     [textView addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
     return cell;
 }
 
@@ -93,6 +95,7 @@
 
     UILabel* label = (UILabel*) [cell viewWithTag:kLabelTag];
     label.text = self.label;
+    [super configureCell:cell];
 }
 
 - (void) didSelectCell:(NSIndexPath*)indexPath
@@ -101,6 +104,7 @@
     UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
     textView.userInteractionEnabled = YES;
     [textView becomeFirstResponder];
+    [super didSelectCell:indexPath];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
