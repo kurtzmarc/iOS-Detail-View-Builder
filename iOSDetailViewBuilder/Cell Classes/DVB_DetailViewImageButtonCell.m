@@ -22,8 +22,6 @@
     UITableViewCell* cell;
     
     cell = [self createImageButtonCell];
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

@@ -67,8 +67,6 @@
     UITableViewCell* cell = [self createStockCellWithDelegate:self isEditable:YES];
     UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
     [textView addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

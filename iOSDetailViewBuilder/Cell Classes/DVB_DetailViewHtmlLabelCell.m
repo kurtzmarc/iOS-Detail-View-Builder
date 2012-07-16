@@ -22,8 +22,6 @@ int height;
     UITableViewCell* cell;
     
     cell = [self createLabelCell];
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

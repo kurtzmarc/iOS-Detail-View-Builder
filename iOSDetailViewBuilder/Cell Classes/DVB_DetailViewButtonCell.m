@@ -35,8 +35,6 @@
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
     cell.textLabel.textAlignment = UITextAlignmentCenter;
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

@@ -44,8 +44,6 @@
     CGRect textViewFrame = textView.frame;
     textViewFrame.size.width += 25;
     textView.frame = textViewFrame;
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

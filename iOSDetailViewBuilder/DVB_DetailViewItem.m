@@ -59,6 +59,12 @@
     @throw [NSException exceptionWithName:@"InternalCodingException" reason:@"Internal coding exception - 'createCell' method not implemented in class." userInfo:nil];
 }
 
+- (void) cellCreated:(UITableViewCell*) cell
+{
+    if (self.onCellCreated)
+        self.onCellCreated(cell);
+}
+
 - (UITableViewCell*) createStockCellWithDelegate:(id<UITextViewDelegate>) delegate isEditable:(BOOL) editable {
     UITableViewCell* cell;
     

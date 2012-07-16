@@ -74,6 +74,7 @@
     }
     
     [item configureCell:cell];
+    [item cellCreated:cell];
     return cell;
 }
 

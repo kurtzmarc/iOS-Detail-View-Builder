@@ -37,8 +37,6 @@
     UIActivityIndicatorView* activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [activityIndicator startAnimating];
     cell.accessoryView = activityIndicator;
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

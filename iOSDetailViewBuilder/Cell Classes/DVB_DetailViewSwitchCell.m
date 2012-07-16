@@ -67,8 +67,6 @@
     switchControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
     [cell.contentView addSubview:switchControl];
     
-    if (self.onCellCreated)
-        self.onCellCreated(cell);
     return cell;
 }
 

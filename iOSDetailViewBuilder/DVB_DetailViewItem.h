@@ -43,6 +43,7 @@ typedef void(^CellBlock)(UITableViewCell* cell);
 
 - (NSString*) cellIdentifier;
 - (UITableViewCell*) createCell;
+- (void) cellCreated:(UITableViewCell*) cell;
 - (void) configureCell:(UITableViewCell*) cell;
 - (void) didSelectCell:(NSIndexPath*)indexPath;
 - (void) requestEndEditing;
