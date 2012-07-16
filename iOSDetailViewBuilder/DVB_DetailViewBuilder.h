@@ -27,4 +27,5 @@
 - (CGFloat) heightForIndexPath:(NSIndexPath *)indexPath;
 - (NSIndexPath*) indexPathForItem:(DVB_DetailViewItem*) item;
 - (void) requestEndEditing;
+- (void) updateEditors;
 @end

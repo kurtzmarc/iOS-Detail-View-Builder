@@ -26,7 +26,6 @@
     return self;
 }
 
-
 -(void) addDetailViewBuilderGroup:(DVB_DetailViewGroup*) detailViewBuilderGroup;
 {
     [self.groupArray addObject:detailViewBuilderGroup];
@@ -91,6 +90,17 @@
     for (DVB_DetailViewGroup* group in self.groupArray) {
         for (DVB_DetailViewItem* item in group.groupItemArray) {
             [item requestEndEditing];
+        }
+    }
+}
+
+- (void) updateEditors
+{
+    for (DVB_DetailViewGroup* group in self.groupArray) {
+        for (DVB_DetailViewItem* item in group.groupItemArray) {
+            UITableViewCell* cell = [item.tableViewController.tableView cellForRowAtIndexPath:[self indexPathForItem:item]];
+            if (cell)
+                [item configureCell:cell];
         }
     }
 }
