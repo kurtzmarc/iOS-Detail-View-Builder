@@ -75,7 +75,7 @@
     UISwitch* switchControl = (UISwitch*) sender;
     [self.dataManager setValue:[NSNumber numberWithBool:switchControl.isOn] forItem:self];
     if (self.onSwitch)
-        self.onSwitch();
+        self.onSwitch(switchControl.isOn);
 }
 
 - (void) configureCell:(UITableViewCell*) cell

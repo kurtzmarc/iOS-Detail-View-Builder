@@ -16,6 +16,7 @@
 #define kImageViewTag       6
 
 typedef void(^BlockAction)(void);
+typedef void(^BooleanParameterAction)(BOOL);
 typedef void(^CellBlock)(UITableViewCell* cell);
 
 @class DVB_DetailViewBuilder, DVB_DetailViewDataManager;
