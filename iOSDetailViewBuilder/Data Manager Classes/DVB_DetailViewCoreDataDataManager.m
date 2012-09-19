@@ -9,6 +9,7 @@
 #import "DVB_DetailViewCoreDataDataManager.h"
 #import "DVB_DetailViewBuilder.h"
 #import "DVB_DetailViewItem.h"
+//#import "TTGlobalUICommon.h"
 
 @implementation DVB_DetailViewCoreDataDataManager
 
@@ -33,11 +34,26 @@
 {
     if (self.managedObject && (!self.managedObject.isDeleted))
     {
+//        if (TTOSVersion() >= 5.0) {
+//            NSManagedObjectContext* moc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+//            [moc setPersistentStoreCoordinator:self.managedObject.managedObjectContext.persistentStoreCoordinator];
+//            NSManagedObjectID* objectId = self.managedObject.objectID;
+//            [moc performBlock:^{
+//                NSManagedObject* managedObject = [moc objectWithID:objectId];
+//                
+//                [managedObject setValue:value forKey:item.key];
+//                
+//                NSError *error;
+//                if (![moc save:&error])
+//                    NSLog(@"Error saving: %@", [error localizedDescription]);
+//            }];
+//        } else {
         [self.managedObject setValue:value forKey:item.key];
         
         NSError *error;
         if (![self.managedObject.managedObjectContext save:&error])
             NSLog(@"Error saving: %@", [error localizedDescription]);
+//        }
     }
 }
 
