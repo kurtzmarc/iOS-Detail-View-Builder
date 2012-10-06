@@ -42,6 +42,11 @@
     return group == nil ? 0 : [group groupItemCount];
 }
 
+- (NSUInteger) indexForGroup:(DVB_DetailViewGroup*)group
+{
+    return [self.groupArray indexOfObject:group];
+}
+
 -(NSObject*) valueForIndexPath:(NSIndexPath*) index
 {
     DVB_DetailViewItem* item = [self itemForIndexPath:index];

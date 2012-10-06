@@ -20,6 +20,7 @@
 - (void) addDetailViewBuilderGroup:(DVB_DetailViewGroup*) detailViewBuilderGroup;
 - (NSInteger) groupCount;
 - (NSInteger) groupItemCount:(NSUInteger)section;
+- (NSUInteger) indexForGroup:(DVB_DetailViewGroup*)group;
 - (NSObject*) valueForIndexPath:(NSIndexPath*) index;
 - (DVB_DetailViewItem*) itemForIndexPath:(NSIndexPath*) index;
 - (DVB_DetailViewGroup*) groupForSection:(NSInteger) section;
