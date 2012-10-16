@@ -19,6 +19,7 @@
 
 - (id)initWithTitle:(NSString *) title withBuilder:(DVB_DetailViewBuilder*) builder;
 - (void) addDetailViewItem:(DVB_DetailViewItem*) detailViewItem;
+- (void) removeDetailViewItemAtIndex:(NSInteger) index;
 - (NSInteger) groupItemCount;
 - (DVB_DetailViewItem*) itemForIndex:(NSInteger) index;
 - (NSInteger) indexOfItem:(DVB_DetailViewItem*) item;

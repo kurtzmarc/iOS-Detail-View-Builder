@@ -31,6 +31,13 @@
     [self.groupArray addObject:detailViewBuilderGroup];
 }
 
+- (void) removeDetailViewItemAtIndexPath:(NSIndexPath*) index
+{
+    DVB_DetailViewGroup* group = [self groupForSection:index.section];
+    if (group)
+        [group removeDetailViewItemAtIndex:index.row];
+}
+
 -(NSInteger) groupCount
 {
     return [self.groupArray count];

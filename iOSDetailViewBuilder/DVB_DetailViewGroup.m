@@ -33,6 +33,11 @@
     [self.groupItemArray addObject:detailViewItem];
 }
 
+- (void) removeDetailViewItemAtIndex:(NSInteger) index;
+{
+    [self.groupItemArray removeObjectAtIndex:index];
+}
+
 -(NSInteger) groupItemCount
 {
     return [self.groupItemArray count];

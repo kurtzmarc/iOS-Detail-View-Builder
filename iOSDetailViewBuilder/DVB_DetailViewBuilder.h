@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSMutableArray* groupArray;
 
 - (void) addDetailViewBuilderGroup:(DVB_DetailViewGroup*) detailViewBuilderGroup;
+- (void) removeDetailViewItemAtIndexPath:(NSIndexPath*) index;
 - (NSInteger) groupCount;
 - (NSInteger) groupItemCount:(NSUInteger)section;
 - (NSUInteger) indexForGroup:(DVB_DetailViewGroup*)group;
