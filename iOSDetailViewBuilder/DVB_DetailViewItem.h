@@ -15,10 +15,6 @@
 #define kSwitchTag          5
 #define kImageViewTag       6
 
-typedef void(^BlockAction)(void);
-typedef void(^BooleanParameterAction)(BOOL);
-typedef void(^CellBlock)(UITableViewCell* cell);
-
 @class DVB_DetailViewBuilder, DVB_DetailViewDataManager;
 
 @interface DVB_DetailViewItem : NSObject {
@@ -30,9 +26,9 @@ typedef void(^CellBlock)(UITableViewCell* cell);
 @property (nonatomic, strong) NSString* key;
 @property (nonatomic, strong) UITableViewController* tableViewController;
 @property (nonatomic, strong) DVB_DetailViewBuilder* builder;
-@property (nonatomic, copy) BlockAction onSelectCell;
-@property (nonatomic, copy) CellBlock onConfigureCell;
-@property (nonatomic, copy) CellBlock onCellCreated;
+@property (nonatomic, copy) void(^onSelectCell)();
+@property (nonatomic, copy) void(^onConfigureCell)(UITableViewCell*);
+@property (nonatomic, copy) void(^onCellCreated)(UITableViewCell*);
 
 - (id)initWithLabel:(NSString *)labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager

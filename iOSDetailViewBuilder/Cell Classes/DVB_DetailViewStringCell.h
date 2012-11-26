@@ -33,5 +33,6 @@
 @property (nonatomic) UIReturnKeyType returnKeyType;
 @property (nonatomic, getter=isSecureTextEntry) BOOL secureTextEntry;
 @property (nonatomic) UITextSpellCheckingType spellCheckingType;
+@property (nonatomic, copy) void(^onTextChanged)(NSString*);
 
 @end

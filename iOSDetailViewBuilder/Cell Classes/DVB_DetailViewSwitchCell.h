@@ -25,6 +25,6 @@
 
 - (void) onSwitch:(id) sender;
 
-@property (nonatomic, copy) BooleanParameterAction onSwitch;
+@property (nonatomic, copy) void(^onSwitch)(BOOL);
 
 @end

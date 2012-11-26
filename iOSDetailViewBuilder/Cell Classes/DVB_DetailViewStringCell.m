@@ -21,6 +21,7 @@
 @synthesize returnKeyType = _returnKeyType;
 @synthesize secureTextEntry = _secureTextEntry;
 @synthesize spellCheckingType = _spellCheckingType;
+@synthesize onTextChanged = _onTextChanged;
 
 - (id)initWithLabel:(NSString *) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
@@ -157,6 +158,8 @@
     textView.userInteractionEnabled = NO;
     [textView resignFirstResponder];
     [self.dataManager setValue:textView.text forItem:self];
+    if (self.onTextChanged)
+        self.onTextChanged(textView.text);
 
     [self.tableViewController.tableView beginUpdates];
     [self.tableViewController.tableView endUpdates];
