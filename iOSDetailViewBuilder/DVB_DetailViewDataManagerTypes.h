@@ -13,5 +13,6 @@
 #import "Data Manager Classes/DVB_DetailViewNSUserDefaultsDataManager.h"
 #import "Data Manager Classes/DVB_DetailViewObjectDataManager.h"
 #import "Data Manager Classes/DVB_DetailViewNullDataManager.h"
+#import "Data Manager Classes/DVB_DetailViewSingleValueDataManager.h"
 
 #endif
