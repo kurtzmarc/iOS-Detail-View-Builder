@@ -65,7 +65,7 @@
         self.onCellCreated(cell);
 }
 
-- (UITableViewCell*) createStockCellWithDelegate:(id<UITextViewDelegate>) delegate isEditable:(BOOL) editable {
+- (UITableViewCell*) createStockCell {
     UITableViewCell* cell;
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:self.cellIdentifier];
@@ -94,7 +94,6 @@
     textField.backgroundColor = [UIColor clearColor];
     textField.scrollEnabled = NO;
     textField.userInteractionEnabled = NO;
-    textField.delegate = delegate;
     textField.font = [UIFont boldSystemFontOfSize:15];
     textField.tag = kTextFieldTag;
     //textField.returnKeyType = UIReturnKeyDone;

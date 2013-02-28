@@ -45,5 +45,5 @@
 - (void) didSelectCell:(NSIndexPath*)indexPath;
 - (void) requestEndEditing;
 
-- (UITableViewCell*) createStockCellWithDelegate:(id<UITextViewDelegate>) delegate isEditable:(BOOL) editable;
+- (UITableViewCell*) createStockCell;
 @end

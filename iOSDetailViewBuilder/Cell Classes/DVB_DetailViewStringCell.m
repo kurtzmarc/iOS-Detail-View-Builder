@@ -65,7 +65,7 @@
 
 - (UITableViewCell*) createCell
 {
-    UITableViewCell* cell = [self createStockCellWithDelegate:self isEditable:YES];
+    UITableViewCell* cell = [self createStockCell];
     UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
     [textView addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
     return cell;
@@ -85,6 +85,7 @@
     textView.keyboardType = self.keyboardType;
     textView.returnKeyType = self.returnKeyType;
     textView.secureTextEntry = self.secureTextEntry;
+    textView.delegate = self;
     if (TTOSVersionIsAtLeast(5.0))
     {
         textView.spellCheckingType = self.spellCheckingType;
