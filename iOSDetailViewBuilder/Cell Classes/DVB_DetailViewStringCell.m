@@ -12,6 +12,9 @@
 #import "TTGlobalUICommon.h"
 
 @implementation DVB_DetailViewStringCell
+{
+    __weak UITextView* _textView;
+}
 
 @synthesize autocapitalizationType = _autocapitalizationType;
 @synthesize autocorrectionType = _autocorrectionType;
@@ -76,22 +79,22 @@
     _cellHeight = 0;
 
     NSString* value = (NSString*)[self.dataManager getValue:self];
-    UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
-    textView.text = value;
-    textView.autocapitalizationType = self.autocapitalizationType;
-    textView.autocorrectionType = self.autocorrectionType;
-    textView.enablesReturnKeyAutomatically = self.enablesReturnKeyAutomatically;
-    textView.keyboardAppearance = self.keyboardAppearance;
-    textView.keyboardType = self.keyboardType;
-    textView.returnKeyType = self.returnKeyType;
-    textView.secureTextEntry = self.secureTextEntry;
-    textView.delegate = self;
+    _textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
+    _textView.text = value;
+    _textView.autocapitalizationType = self.autocapitalizationType;
+    _textView.autocorrectionType = self.autocorrectionType;
+    _textView.enablesReturnKeyAutomatically = self.enablesReturnKeyAutomatically;
+    _textView.keyboardAppearance = self.keyboardAppearance;
+    _textView.keyboardType = self.keyboardType;
+    _textView.returnKeyType = self.returnKeyType;
+    _textView.secureTextEntry = self.secureTextEntry;
+    _textView.delegate = self;
     if (TTOSVersionIsAtLeast(5.0))
     {
-        textView.spellCheckingType = self.spellCheckingType;
+        _textView.spellCheckingType = self.spellCheckingType;
     }
     
-    [self adjustTextView:textView];
+    [self adjustTextView:_textView];
 
     UILabel* label = (UILabel*) [cell viewWithTag:kLabelTag];
     label.text = self.label;
@@ -100,10 +103,8 @@
 
 - (void) didSelectCell:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = [self.tableViewController.tableView cellForRowAtIndexPath:indexPath];
-    UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
-    textView.userInteractionEnabled = YES;
-    [textView becomeFirstResponder];
+    _textView.userInteractionEnabled = YES;
+    [_textView becomeFirstResponder];
     [super didSelectCell:indexPath];
 }
 
@@ -145,10 +146,7 @@
 
 - (void) requestEndEditing
 {
-    NSIndexPath* indexPath = [self.builder indexPathForItem:self];
-    UITableViewCell* cell = [self.tableViewController.tableView cellForRowAtIndexPath:indexPath];
-    UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
-    [textView endEditing:YES];
+    [_textView endEditing:YES];
 }
 
 @end
