@@ -87,6 +87,8 @@
     label.font = [UIFont boldSystemFontOfSize:12];
     label.textAlignment = UITextAlignmentRight;
     label.backgroundColor = [UIColor clearColor];
+    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    label.numberOfLines = 0;
     [cell.contentView addSubview:label];
     
     // Add text field
