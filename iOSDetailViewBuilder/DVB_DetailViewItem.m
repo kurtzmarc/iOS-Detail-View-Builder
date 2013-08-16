@@ -68,7 +68,7 @@
 - (UITableViewCell*) createStockCell {
     UITableViewCell* cell;
     
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:self.cellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
     cell.clipsToBounds = YES;
     
     // Calculate layout
