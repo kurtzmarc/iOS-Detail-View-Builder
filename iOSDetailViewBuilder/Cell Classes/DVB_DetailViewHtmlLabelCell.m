@@ -14,7 +14,7 @@ int height;
 
 - (NSString*)cellIdentifier
 {
-    return @"BuilderLabelCell";
+    return @"HtmlLabelCell";
 }
 
 - (UITableViewCell*) createCell
@@ -43,11 +43,6 @@ int height;
 
 - (void) configureCell:(UITableViewCell*) cell
 {
-    UILabel* label = (UILabel*)[cell.contentView viewWithTag:kLabelTag];
-    label.text = self.label;
-    CGRect textSize = [label textRectForBounds:CGRectMake(0, 0, 300, CGFLOAT_MAX) limitedToNumberOfLines:0];
-    height = textSize.size.height;
-    label.bounds = textSize;
     [super configureCell:cell];
 }
 
@@ -59,7 +54,6 @@ int height;
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
     cell.clipsToBounds = YES;
-    cell.backgroundColor = [UIColor whiteColor];
     
     CGRect cellRect = cell.frame;
     CGRect labelRect = CGRectZero;
