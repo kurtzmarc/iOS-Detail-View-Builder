@@ -54,11 +54,7 @@
 
 -(CGFloat)height
 {
-    if (_cellHeight == 0)
-    {
-        _cellHeight = ttkDefaultRowHeight;
-    }
-    return _cellHeight;
+    return MAX(_cellHeight, ttkDefaultRowHeight);
 }
 
 - (NSString*)cellIdentifier
@@ -118,12 +114,8 @@
         if (!CGSizeEqualToSize(newSize, oldSize))
         {
             [self adjustTextView:textView];
-
-            [self performSelector:@selector(resizeTableView) withObject:nil afterDelay:0.0];
         }
     }
-    else
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 -(void) resizeTableView
@@ -134,14 +126,16 @@
 
 -(void)adjustTextView:(UITextView*) textView
 {
-    _cellHeight = MAX(textView.contentSize.height + 4.5, ttkDefaultRowHeight);
+    CGFloat calculatedHeight = [textView sizeThatFits:CGSizeMake(textView.frame.size.width, FLT_MAX)].height;
+    calculatedHeight += 9; // To account for UITextView offset within UITableViewCell
     
-    if (textView.text.length == 0)
-        _cellHeight = ttkDefaultRowHeight;
-    
-    CGRect frame = textView.frame;
-    frame.size.height = _cellHeight - 9;
-    textView.frame = frame;
+    if (calculatedHeight != _cellHeight){
+        _cellHeight = calculatedHeight;
+        CGRect frame = textView.frame;
+        frame.size.height = _cellHeight - 9; // To account for UITextView offset within UITableViewCell
+        textView.frame = frame;
+        [self performSelector:@selector(resizeTableView) withObject:nil afterDelay:0.0];
+    }
 }
 
 - (void) requestEndEditing
