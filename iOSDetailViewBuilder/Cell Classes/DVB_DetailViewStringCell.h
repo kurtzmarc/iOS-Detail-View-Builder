@@ -13,8 +13,7 @@
 
 @interface DVB_DetailViewStringCell : DVB_DetailViewItem<UITextViewDelegate>
 {
-    int _cellHeight;
-    int _cellWidth;
+    CGFloat _cellHeight;
 }
 
 - (id)initWithLabel:(NSString *) labelString

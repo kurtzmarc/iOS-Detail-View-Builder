@@ -35,11 +35,6 @@
     self = [super initWithLabel:labelString withDataManager:dataManager withKey:key withController:controller withBuilder:builder];
     if (self) {
         _cellHeight = 0;
-        //if (NIInterfaceOrientation() == UIInterfaceOrientationLandscapeLeft || NIInterfaceOrientation() == UIInterfaceOrientationLandscapeRight) 
-        if (TTDeviceOrientationIsLandscape())
-            _cellWidth = TTIsPad() ? 515 : 340;
-        else if (TTDeviceOrientationIsPortrait())
-            _cellWidth = TTIsPad() ? 576 : 180;
         _autocapitalizationType = UITextAutocapitalizationTypeSentences;
         _autocorrectionType = UITextAutocorrectionTypeDefault;
         _enablesReturnKeyAutomatically = NO;
@@ -85,10 +80,7 @@
     _textView.returnKeyType = self.returnKeyType;
     _textView.secureTextEntry = self.secureTextEntry;
     _textView.delegate = self;
-    if (TTOSVersionIsAtLeast(5.0))
-    {
-        _textView.spellCheckingType = self.spellCheckingType;
-    }
+    _textView.spellCheckingType = self.spellCheckingType;
     
     [self adjustTextView:_textView];
 
@@ -168,4 +160,29 @@
     return YES;
 }
 
+-(void)textViewDidChange:(UITextView *)textView
+{
+    [self adjustTextView:textView];
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView
+{
+    CGRect cursorRect = [textView caretRectForPosition:textView.selectedTextRange.start];
+    
+    cursorRect = [self.tableViewController.tableView convertRect:cursorRect fromView:textView];
+    
+    if (![self rectVisible:cursorRect]) {
+        cursorRect.size.height += 8; // To add some space underneath the cursor
+        [self.tableViewController.tableView scrollRectToVisible:cursorRect animated:YES];
+    }
+}
+- (BOOL)rectVisible: (CGRect)rect {
+    CGRect visibleRect;
+    visibleRect.origin = self.tableViewController.tableView.contentOffset;
+    visibleRect.origin.y += self.tableViewController.tableView.contentInset.top;
+    visibleRect.size = self.tableViewController.tableView.bounds.size;
+    visibleRect.size.height -= self.tableViewController.tableView.contentInset.top + self.tableViewController.tableView.contentInset.bottom;
+    
+    return CGRectContainsRect(visibleRect, rect);
+}
 @end
