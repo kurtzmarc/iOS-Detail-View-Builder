@@ -1,9 +1,5 @@
 //
-//  DVB_DetailViewProgressCell.h
-//  iOSDetailViewBuilder
-//
-//  Created by Marc Kurtz on 6/6/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2013 Kurtz Consulting Services LLC.
 //
 
 #import "DVB_DetailViewItem.h"

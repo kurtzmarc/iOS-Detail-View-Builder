@@ -1,9 +1,5 @@
 //
-//  DVB_ExpandableTextView.h
-//  iOSDetailViewBuilder
-//
-//  Created by Marc Kurtz on 1/1/12.
-//  Copyright (c) 2012 Kurtz Consulting Services LLC. All rights reserved.
+//  Copyright 2013 Kurtz Consulting Services LLC.
 //
 
 #import <UIKit/UIKit.h>

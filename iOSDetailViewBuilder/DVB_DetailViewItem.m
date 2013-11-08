@@ -1,9 +1,5 @@
 //
-//  DVB_DetailViewItem.m
-//  iOSDetailViewBuilder
-//
-//  Created by Marc Kurtz on 6/26/11.
-//  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
+//  Copyright 2013 Kurtz Consulting Services LLC.
 //
 
 #import "DVB_DetailViewItem.h"

@@ -1,9 +1,5 @@
 //
-//  DVB_DetailViewNSUserDefaultsDataManager.h
-//  iOSDetailViewBuilder
-//
-//  Created by Marc Kurtz on 12/27/11.
-//  Copyright 2011 Kurtz Consulting Services LLC. All rights reserved.
+//  Copyright 2013 Kurtz Consulting Services LLC.
 //
 
 #import <Foundation/Foundation.h>

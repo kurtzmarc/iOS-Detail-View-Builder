@@ -1,8 +1,5 @@
 //
-//  DVB_DetailViewShortStringCell.m
-//  iOSDetailViewBuilder
-//
-//  Copyright 2013 Kurtz Consulting Services LLC. All rights reserved.
+//  Copyright 2013 Kurtz Consulting Services LLC.
 //
 
 #import "DVB_DetailViewShortStringCell.h"

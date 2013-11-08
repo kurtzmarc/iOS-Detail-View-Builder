@@ -1,9 +1,5 @@
 //
-//  BaseDetailViewController.h
-//  HomeMaintenanceApp
-//
-//  Created by Marc Kurtz on 4/5/12.
-//  Copyright (c) 2012 Kurtz Consulting Services LLC. All rights reserved.
+//  Copyright 2013 Kurtz Consulting Services LLC.
 //
 
 #import <UIKit/UIKit.h>
