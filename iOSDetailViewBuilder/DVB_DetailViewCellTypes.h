@@ -10,6 +10,7 @@
 #define Face_Charts_DetailViewCellTypes_h
 
 #import "Cell Classes/DVB_DetailViewStringCell.h"
+#import "Cell Classes/DVB_DetailViewShortStringCell.h"
 #import "Cell Classes/DVB_DetailViewDateCell.h"
 #import "Cell Classes/DVB_DetailViewButtonCell.h"
 #import "Cell Classes/DVB_DetailViewSwitchCell.h"
