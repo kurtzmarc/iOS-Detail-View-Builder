@@ -42,9 +42,6 @@ int height;
     [super configureCell:cell];
 }
 
-#define GROUPED_CELL_WIDTH 300
-#define CELL_PADDING 5
-
 - (UITableViewCell*) createLabelCell {
     UITableViewCell* cell;
     

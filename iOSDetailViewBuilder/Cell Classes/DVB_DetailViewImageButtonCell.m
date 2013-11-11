@@ -31,9 +31,6 @@
     cell.textLabel.text = nil;
 }
 
-#define GROUPED_CELL_WIDTH 300
-#define CELL_PADDING 5
-
 - (UITableViewCell*) createImageButtonCell {
     UITableViewCell* cell;
     

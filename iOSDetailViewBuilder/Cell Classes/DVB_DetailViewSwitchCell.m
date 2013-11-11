@@ -11,9 +11,6 @@
 
 @synthesize onSwitch = _onSwitch;
 
-#define GROUPED_CELL_WIDTH 300
-#define CELL_PADDING 5
-
 - (id)initWithLabel:(NSString *) labelString
     withDataManager:(DVB_DetailViewDataManager*) dataManager
             withKey:(NSString*) key

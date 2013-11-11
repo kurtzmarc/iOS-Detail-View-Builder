@@ -8,9 +8,6 @@
 #import "TTGlobalUICommon.h"
 #import "DVB_ExpandableTextView.h"
 
-#define GROUPED_CELL_WIDTH 300
-#define CELL_PADDING 5
-
 @implementation DVB_DetailViewItem
 
 @synthesize dataManager = _dataManager;

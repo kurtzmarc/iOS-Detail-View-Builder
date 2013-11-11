@@ -11,6 +11,9 @@
 #define kSwitchTag          5
 #define kImageViewTag       6
 
+#define GROUPED_CELL_WIDTH 300
+#define CELL_PADDING 5
+
 @class DVB_DetailViewBuilder, DVB_DetailViewDataManager;
 
 @interface DVB_DetailViewItem : NSObject {
