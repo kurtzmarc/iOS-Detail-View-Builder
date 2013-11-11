@@ -40,26 +40,42 @@
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
     cell.clipsToBounds = YES;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+
+    // Create the controls
+    UILabel* label = [[UILabel alloc] init];
+    UISwitch* switchControl = [[UISwitch alloc] init];
+
+    // Calculate layout
+    int inset = IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ? 15 : 10;
+    CGRect labelRect;
+    CGRect switchRect;
+    CGRect cellRect = cell.frame;
+    cellRect.size.width = GROUPED_CELL_WIDTH - inset;
+    cellRect.origin.x = inset;
+    CGRectDivide(cellRect, &switchRect, &labelRect, switchControl.frame.size.width, CGRectMaxXEdge);
+    //labelRect = CGRectInset(labelRect, CELL_PADDING, 0);
+    switchRect = CGRectInset(switchRect, CELL_PADDING, 0);
+
     // Add label
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, 12, 0, cell.frame.size.height)];
     label.tag = kLabelTag;
-    label.font = [UIFont boldSystemFontOfSize:17.0];
+    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+        label.font = [UIFont systemFontOfSize:18.0];
+    else
+        label.font = [UIFont boldSystemFontOfSize:17.0];
+    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     label.backgroundColor = [UIColor clearColor];
+    label.frame = labelRect;
     [cell.contentView addSubview:label];
     
     // Add switch
-    //UISwitch* switchControl = [[UISwitch alloc] initWithFrame:switchRect];
-    UISwitch* switchControl = [[UISwitch alloc] init];
-    CGRect frame = switchControl.frame;
-    frame = CGRectOffset(frame, cell.contentView.frame.size.width - frame.size.width - CELL_PADDING, (cell.contentView.frame.size.height-frame.size.height)/2);
-    switchControl.frame = frame;
+    switchControl.frame = switchRect;
+    switchControl.center = CGPointMake(switchControl.center.x, cell.center.y);
     switchControl.backgroundColor = [UIColor clearColor];
     switchControl.tag = kSwitchTag;
     [switchControl addTarget: self action: @selector(onSwitch:) forControlEvents:UIControlEventValueChanged];
     switchControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
     [cell.contentView addSubview:switchControl];
-    
+
     return cell;
 }
 
@@ -81,7 +97,6 @@
 
     UILabel* label = (UILabel*) [cell viewWithTag:kLabelTag];
     label.text = self.label;
-    [label sizeToFit];
     [super configureCell:cell];
 }
 
