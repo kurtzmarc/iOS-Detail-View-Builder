@@ -93,6 +93,7 @@
     textField.backgroundColor = [UIColor clearColor];
     textField.userInteractionEnabled = NO;
     textField.font = [UIFont boldSystemFontOfSize:15];
+    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     textField.tag = kTextFieldTag;
     //textField.returnKeyType = UIReturnKeyDone;
     textField.autoresizingMask =  UIViewAutoresizingFlexibleWidth;// | UIViewAutoresizingFlexibleHeight ;
