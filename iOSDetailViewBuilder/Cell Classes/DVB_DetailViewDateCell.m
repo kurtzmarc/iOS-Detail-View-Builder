@@ -26,6 +26,13 @@
     return self;
 }
 
+-(void)dealloc
+{
+    _popoverController = nil;
+    _actionSheet = nil;
+    _datePicker = nil;
+}
+
 - (NSString*)cellIdentifier
 {
     return [@"BuilderDateCell-" stringByAppendingString:self.key];

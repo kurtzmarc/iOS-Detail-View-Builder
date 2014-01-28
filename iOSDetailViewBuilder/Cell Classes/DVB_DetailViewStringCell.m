@@ -43,6 +43,12 @@
     return self;
 }
 
+-(void)dealloc
+{
+//    if (_textView)
+//        [_textView removeObserver:self forKeyPath:@"contentSize"];
+}
+
 -(CGFloat)height
 {
     return MAX(_cellHeight, ttkDefaultRowHeight);

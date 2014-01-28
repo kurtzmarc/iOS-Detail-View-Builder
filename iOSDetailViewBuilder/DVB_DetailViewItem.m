@@ -36,6 +36,10 @@
     return self;
 }
 
+-(void)dealloc
+{
+    _dataManager = nil;
+}
 
 - (CGFloat) height
 {

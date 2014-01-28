@@ -46,6 +46,11 @@
     return self;
 }
 
+-(void)dealloc
+{
+    //
+}
+
 -(CGFloat)height
 {
     return MAX(_cellHeight, ttkDefaultRowHeight);

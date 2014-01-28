@@ -17,6 +17,11 @@
     return self;
 }
 
+-(void)dealloc
+{
+    //
+}
+
 -(NSObject *)getValue:(DVB_DetailViewItem*) item;
 {
     if ([KEY_TRUE isEqualToString:item.key])

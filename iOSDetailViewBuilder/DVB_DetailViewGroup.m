@@ -24,6 +24,11 @@
     return self;
 }
 
+-(void)dealloc
+{
+    _groupItemArray = nil;
+}
+
 -(void) addDetailViewItem:(DVB_DetailViewItem*) detailViewItem
 {
     [self.groupItemArray addObject:detailViewItem];

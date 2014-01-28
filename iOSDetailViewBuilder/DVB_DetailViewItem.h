@@ -23,8 +23,8 @@
 @property (nonatomic, strong) DVB_DetailViewDataManager* dataManager;
 @property (nonatomic, strong) NSString* label;
 @property (nonatomic, strong) NSString* key;
-@property (nonatomic, strong) UITableViewController* tableViewController;
-@property (nonatomic, strong) DVB_DetailViewBuilder* builder;
+@property (nonatomic, weak) UITableViewController* tableViewController;
+@property (nonatomic, weak) DVB_DetailViewBuilder* builder;
 @property (nonatomic, copy) void(^onSelectCell)();
 @property (nonatomic, copy) void(^onConfigureCell)(UITableViewCell*);
 @property (nonatomic, copy) void(^onCellCreated)(UITableViewCell*);

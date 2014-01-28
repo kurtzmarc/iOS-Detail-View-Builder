@@ -23,6 +23,12 @@
     return self;
 }
 
+-(void)dealloc
+{
+    _builder = nil;
+    _dataManager = nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

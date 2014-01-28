@@ -10,7 +10,7 @@
 
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSString* footerText;
-@property (nonatomic, strong) DVB_DetailViewBuilder* builder;
+@property (nonatomic, weak) DVB_DetailViewBuilder* builder;
 @property (nonatomic, strong) NSMutableArray* groupItemArray;
 
 - (id)initWithTitle:(NSString *) title withBuilder:(DVB_DetailViewBuilder*) builder;
