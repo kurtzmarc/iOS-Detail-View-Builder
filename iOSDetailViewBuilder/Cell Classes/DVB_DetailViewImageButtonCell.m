@@ -50,7 +50,7 @@
     label.tag = kLabelTag;
     //label.textColor = [UIColor colorWithRed:0.32 green:0.40 blue:0.57 alpha:1.0];
     label.font = [UIFont boldSystemFontOfSize:17.0];
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     label.autoresizingMask =  UIViewAutoresizingFlexibleWidth;
     [cell.contentView addSubview:label];

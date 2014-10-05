@@ -40,7 +40,7 @@
 -(CGFloat)height
 {
     // -20 because we are dealing with grouped table cells.
-    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (self.textInset.width * 2) - 20, CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize textSize = [self.label sizeWithFont:self.font constrainedToSize:CGSizeMake(self.tableViewController.tableView.frame.size.width - (self.textInset.width * 2) - 20, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
     return textSize.height + (self.textInset.height * 2);
 }
 
@@ -64,13 +64,13 @@
     CGRect labelRect = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
     labelRect = CGRectInset(labelRect, self.textInset.width, 0);
     UILabel* label = [[UILabel alloc] initWithFrame:labelRect];
-    label.lineBreakMode = UILineBreakModeWordWrap;
+    label.lineBreakMode = NSLineBreakByWordWrapping;
     label.numberOfLines = 0;
     label.text = self.label;
     label.tag = kLabelTag;
     //label.textColor = [UIColor colorWithRed:0.32 green:0.40 blue:0.57 alpha:1.0];
     label.font = self.font;
-    label.textAlignment = UITextAlignmentLeft;
+    label.textAlignment = NSTextAlignmentLeft;
     label.backgroundColor = [UIColor clearColor];
     label.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [cell.contentView addSubview:label];
