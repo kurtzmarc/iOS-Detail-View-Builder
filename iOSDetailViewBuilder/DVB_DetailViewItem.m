@@ -39,6 +39,11 @@
 -(void)dealloc
 {
     _dataManager = nil;
+    _label = nil;
+    _key = nil;
+    _onSelectCell = nil;
+    _onConfigureCell = nil;
+    _onCellCreated = nil;
 }
 
 - (CGFloat) height

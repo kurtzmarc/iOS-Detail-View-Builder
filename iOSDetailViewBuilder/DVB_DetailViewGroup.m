@@ -26,6 +26,8 @@
 
 -(void)dealloc
 {
+    _title = nil;
+    _footerText = nil;
     _groupItemArray = nil;
 }
 
