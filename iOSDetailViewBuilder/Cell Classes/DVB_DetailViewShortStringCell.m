@@ -87,7 +87,7 @@
     label.tag = kLabelTag;
     label.textColor = [UIColor colorWithRed:0.32 green:0.40 blue:0.57 alpha:1.0];
     label.font = [UIFont boldSystemFontOfSize:12];
-    label.textAlignment = UITextAlignmentRight;
+    label.textAlignment = NSTextAlignmentRight;
     label.backgroundColor = [UIColor clearColor];
     label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     label.numberOfLines = 0;
