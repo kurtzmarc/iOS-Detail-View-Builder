@@ -6,4 +6,6 @@
 
 @interface DVB_ExpandableTextView : UITextView
 
+@property (nonatomic, copy) void (^onContentSizeChanged)(UITextView*);
+
 @end

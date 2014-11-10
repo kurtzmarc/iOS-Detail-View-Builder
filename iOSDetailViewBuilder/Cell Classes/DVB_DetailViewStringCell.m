@@ -5,11 +5,12 @@
 #import "DVB_DetailViewStringCell.h"
 #import "DVB_DetailViewDataManager.h"
 #import "DVB_DetailViewBuilder.h"
+#import "DVB_ExpandableTextView.h"
 #import "TTGlobalUICommon.h"
 
 @implementation DVB_DetailViewStringCell
 {
-    __weak UITextView* _textView;
+    __weak DVB_ExpandableTextView* _textView;
 }
 
 @synthesize autocapitalizationType = _autocapitalizationType;
@@ -45,8 +46,7 @@
 
 -(void)dealloc
 {
-//    if (_textView)
-//        [_textView removeObserver:self forKeyPath:@"contentSize"];
+    //
 }
 
 -(CGFloat)height
@@ -62,8 +62,6 @@
 - (UITableViewCell*) createCell
 {
     UITableViewCell* cell = [self createStockCell];
-    UITextView* textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
-    [textView addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
     return cell;
 }
 
@@ -72,7 +70,7 @@
     _cellHeight = 0;
 
     NSString* value = (NSString*)[self.dataManager getValue:self];
-    _textView = (UITextView*) [cell viewWithTag:kTextFieldTag];
+    _textView = (DVB_ExpandableTextView*) [cell viewWithTag:kTextFieldTag];
     _textView.text = value;
     _textView.autocapitalizationType = self.autocapitalizationType;
     _textView.autocorrectionType = self.autocorrectionType;
@@ -83,6 +81,11 @@
     _textView.secureTextEntry = self.secureTextEntry;
     _textView.delegate = self;
     _textView.spellCheckingType = self.spellCheckingType;
+    __weak typeof(self) weakself = self;
+    _textView.onContentSizeChanged = ^(UITextView* textView)
+    {
+        [weakself adjustTextView:textView];
+    };
     
     [self adjustTextView:_textView];
 
@@ -96,20 +99,6 @@
     _textView.userInteractionEnabled = YES;
     [_textView becomeFirstResponder];
     [super didSelectCell:indexPath];
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"contentSize"])
-    {
-        CGSize newSize = [[change objectForKey:NSKeyValueChangeNewKey] CGSizeValue];
-        CGSize oldSize = [[change objectForKey:NSKeyValueChangeOldKey] CGSizeValue];
-        UITextView* textView = (UITextView*)object;
-        if (!CGSizeEqualToSize(newSize, oldSize))
-        {
-            [self adjustTextView:textView];
-        }
-    }
 }
 
 -(void) resizeTableView
