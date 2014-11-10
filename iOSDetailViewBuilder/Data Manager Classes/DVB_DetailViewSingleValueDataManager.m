@@ -21,7 +21,7 @@
 
 -(void)dealloc
 {
-    _object = nil;
+    //
 }
 
 -(NSObject *)getValue:(DVB_DetailViewItem*) item;

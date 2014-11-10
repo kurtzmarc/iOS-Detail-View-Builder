@@ -28,9 +28,7 @@
 
 -(void)dealloc
 {
-    _popoverController = nil;
-    _actionSheet = nil;
-    _datePicker = nil;
+    //
 }
 
 - (NSString*)cellIdentifier

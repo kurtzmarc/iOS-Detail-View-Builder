@@ -26,9 +26,7 @@
 
 -(void)dealloc
 {
-    _title = nil;
-    _footerText = nil;
-    _groupItemArray = nil;
+    //
 }
 
 -(void) addDetailViewItem:(DVB_DetailViewItem*) detailViewItem

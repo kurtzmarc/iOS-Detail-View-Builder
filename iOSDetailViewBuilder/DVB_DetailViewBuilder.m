@@ -24,7 +24,7 @@
 
 -(void)dealloc
 {
-    _groupArray = nil;
+    //
 }
 
 -(void) addDetailViewBuilderGroup:(DVB_DetailViewGroup*) detailViewBuilderGroup;

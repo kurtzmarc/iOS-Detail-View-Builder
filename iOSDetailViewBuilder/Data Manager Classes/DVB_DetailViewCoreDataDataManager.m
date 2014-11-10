@@ -22,7 +22,7 @@
 
 -(void)dealloc
 {
-    _managedObject = nil;
+    //
 }
 
 -(NSObject *)getValue:(DVB_DetailViewItem*) item;
